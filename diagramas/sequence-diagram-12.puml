@@ -1,0 +1,20 @@
+@startuml UC12_ConsultarAgenda
+skinparam backgroundColor #FAFAFA
+skinparam ArrowColor #555555
+skinparam SequenceLifeLineBorderColor #333333
+
+actor "Funcionário" as Funcionario
+participant "Sistema" as Sistema
+database "Banco de Dados" as BD
+
+Funcionario -> Sistema : consultarAgenda(funcionarioId, data)
+Sistema -> BD : buscarAtendimentos(funcionarioId, data)
+BD --> Sistema : listaDeAtendimentos
+
+alt atendimentos encontrados
+  Sistema --> Funcionario : exibirAgenda(listaDeAtendimentos)
+else nenhum atendimento no período
+  Sistema --> Funcionario : exibirMensagem("Nenhum atendimento para o período selecionado.")
+end
+
+@enduml

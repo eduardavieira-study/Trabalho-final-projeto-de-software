@@ -1,0 +1,24 @@
+@startuml UC19_RealizarCheckin
+skinparam backgroundColor #FAFAFA
+skinparam ArrowColor #555555
+skinparam SequenceLifeLineBorderColor #333333
+
+actor "Recepcionista" as Recepcionista
+participant "Sistema" as Sistema
+database "Banco de Dados" as BD
+
+Recepcionista -> Sistema : localizarAgendamento(nomeOuCPF)
+Sistema -> BD : buscarAgendamento(nomeOuCPF)
+BD --> Sistema : dadosAgendamento
+
+alt agendamento encontrado
+  Sistema --> Recepcionista : exibirDadosAgendamento(cliente, servico, profissional, horario)
+  Recepcionista -> Sistema : confirmarCheckin(agendamentoId)
+  Sistema -> BD : atualizarStatusAgendamento(agendamentoId, "check-in realizado")
+  BD --> Sistema : statusAtualizado
+  Sistema --> Recepcionista : exibirConfirmacaoCheckin()
+else agendamento não encontrado
+  Sistema --> Recepcionista : exibirErro("Nenhum agendamento encontrado para este cliente.")
+end
+
+@enduml
