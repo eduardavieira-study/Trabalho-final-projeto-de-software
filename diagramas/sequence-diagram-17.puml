@@ -1,0 +1,50 @@
+@startuml UC17_RealizarCheckin
+
+skinparam backgroundColor #FAFAFA
+skinparam ArrowColor #555555
+skinparam SequenceLifeLineBorderColor #333333
+
+actor "Recepcionista" as Recepcionista
+participant "Sistema" as Sistema
+database "Banco de Dados" as BD
+
+Recepcionista -> Sistema : confirmarCheckin(agendamentoId)
+activate Sistema
+
+Sistema -> BD : buscarAgendamento(agendamentoId)
+activate BD
+
+BD --> Sistema : dadosAgendamento
+deactivate BD
+
+alt Agendamento encontrado
+
+    alt Status = Confirmado
+
+        Sistema -> BD : registrarHorarioChegada()
+        activate BD
+        BD --> Sistema : horarioRegistrado
+        deactivate BD
+
+        Sistema -> BD : atualizarStatus(\n"Check-in realizado")
+        activate BD
+        BD --> Sistema : statusAtualizado
+        deactivate BD
+
+        Sistema --> Recepcionista : exibirConfirmacaoCheckin()
+
+    else Status inválido
+
+        Sistema --> Recepcionista : exibirErro(\n"Check-in não permitido")
+
+    end
+
+else Agendamento não encontrado
+
+    Sistema --> Recepcionista : exibirErro(\n"Agendamento não encontrado")
+
+end
+
+deactivate Sistema
+
+@enduml

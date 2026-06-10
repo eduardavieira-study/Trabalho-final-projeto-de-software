@@ -1,0 +1,51 @@
+@startuml UC07_RealizarAgendamento
+
+skinparam backgroundColor #FAFAFA
+skinparam ArrowColor #555555
+skinparam SequenceLifeLineBorderColor #333333
+
+actor "Cliente" as Cliente
+participant "Sistema" as Sistema
+database "Banco de Dados" as BD
+
+Cliente -> Sistema : consultarHorariosDisponiveis(servico,\nprofissional,data)
+activate Sistema
+
+Sistema -> BD : buscarHorarios(servico,\nprofissional,data)
+activate BD
+BD --> Sistema : listaDeHorarios
+deactivate BD
+
+Sistema --> Cliente : exibirHorariosDisponiveis(listaDeHorarios)
+
+Cliente -> Sistema : realizarAgendamento(clienteId,\nservicoId, profissionalId, horario)
+
+Sistema -> BD : verificarDisponibilidade(profissionalId,\nhorario)
+activate BD
+BD --> Sistema : disponivel
+deactivate BD
+
+alt Horário disponível
+
+    Sistema -> BD : salvarAgendamento(clienteId,\nservicoId, profissionalId, horario)
+    activate BD
+
+    BD --> Sistema : agendamentoConfirmado
+    deactivate BD
+
+    Sistema -> BD : atualizarAgendaProfissional(horario)
+    activate BD
+    BD --> Sistema : agendaAtualizada
+    deactivate BD
+
+    Sistema --> Cliente : exibirConfirmacao(\nagendamentoId, detalhes)
+
+else Horário indisponível
+
+    Sistema --> Cliente : exibirErro(\n"Horário não disponível")
+
+end
+
+deactivate Sistema
+
+@enduml

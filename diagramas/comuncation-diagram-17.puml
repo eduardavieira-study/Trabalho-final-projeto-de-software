@@ -1,0 +1,26 @@
+@startuml Comunicacao_Realizar_Checkin
+
+top to bottom direction
+skinparam nodesep 80
+skinparam ranksep 50
+
+title Diagrama de Comunicação - UC-17: Realizar Check-in
+
+actor "Recepcionista" as R
+rectangle "Frontend\n(Web)" as FE
+rectangle "AgendamentoController" as AC
+rectangle "AgendamentoService" as AS
+rectangle "AgendamentoRepository" as AR
+database "Banco de Dados" as DB
+
+R -- FE : "1: → localizarAgendamento()\n10: ← confirmaCheckin()"
+
+FE -- AC : "2: → realizarCheckin(agendamentoId)"
+
+AC -- AS : "3: → realizarCheckin(id)"
+
+AS -- AR : "4: → buscarAgendamento(id)\n7: → atualizarStatus(CHECKIN_REALIZADO)"
+
+AR -- DB : "5: → consultarAgendamento()\n6: ← dadosAgendamento()\n8: → atualizarAgendamento()\n9: ← atualizacaoRealizada"
+
+@enduml

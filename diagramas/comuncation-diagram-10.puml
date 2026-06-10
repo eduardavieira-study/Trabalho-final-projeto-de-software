@@ -1,0 +1,26 @@
+@startuml Comunicacao_Consultar_Agenda
+
+top to bottom direction
+skinparam nodesep 80
+skinparam ranksep 50
+
+title Diagrama de Comunicação - UC-10: Consultar Agenda de Atendimentos
+
+actor "Funcionário" as F
+rectangle "Frontend\n(Web)" as FE
+rectangle "AgendaController" as AC
+rectangle "AgendaService" as AS
+rectangle "AgendamentoRepository" as AR
+database "Banco de Dados" as DB
+
+F -- FE : "1: → consultarAgenda(data)\n8: ← exibeAgenda()"
+
+FE -- AC : "2: → consultarAgenda(data)"
+
+AC -- AS : "3: → consultarAgenda(data)"
+
+AS -- AR : "4: → buscarAtendimentos(funcionarioId)\n7: ← atendimentos"
+
+AR -- DB : "5: → consultarAgendamentos()\n6: ← listaAtendimentos()"
+
+@enduml

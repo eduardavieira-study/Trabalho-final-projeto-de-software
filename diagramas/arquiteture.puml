@@ -1,0 +1,112 @@
+@startuml Arquitetura_DudaSpa
+skinparam backgroundColor #FAFAFA
+skinparam packageStyle rectangle
+skinparam classBackgroundColor #FFFFFF
+skinparam classBorderColor #333333
+skinparam ArrowColor #555555
+
+package "Arquitetura - Duda Spa" {
+
+  package "controller" {
+    class AgendamentoController
+    class ClienteController
+    class FuncionarioController
+    class PagamentoController
+    class UsuarioController
+    class GerenteController
+  }
+
+  package "dto" {
+    class AgendamentoDTO
+    class ClienteDTO
+    class PagamentoDTO
+    class UsuarioDTO
+    class FuncionarioDTO
+  }
+
+  package "service" {
+    class AgendamentoService
+    class ClienteService
+    class ComissaoService
+    class EstoqueService
+    class FuncionarioService
+    class PagamentoService
+    class UsuarioService
+  }
+
+  package "model" {
+    class Usuario
+    class Cliente
+    class Funcionario
+    class Recepcionista
+    class Gerente
+    class Agendamento
+    class Servico
+    class Pagamento
+    class Comissao
+    class Estoque
+  }
+
+  package "repository" {
+    interface AgendamentoRepository
+    interface ClienteRepository
+    interface ComissaoRepository
+    interface EstoqueRepository
+    interface FuncionarioRepository
+    interface PagamentoRepository
+    interface UsuarioRepository
+  }
+
+  package "enum" {
+    enum Perfil
+    enum StatusAgendamento
+    enum MetodoPagamento
+    enum StatusPagamento
+  }
+
+  package "exception" {
+    class BusinessException
+    class ResourceNotFoundException
+    class AgendamentoConflictException
+    class UnauthorizedException
+  }
+
+  package "security" {
+    class JwtService
+    class SecurityConfig
+    class UserDetailsServiceImpl
+  }
+
+}
+
+' Controller → DTO
+controller ..> dto
+
+' Controller → Service
+controller ..> service
+
+' Service → Repository
+service ..> repository
+
+' Service → Model
+service ..> model
+
+' Repository → Model
+repository ..> model
+
+' Service → Enum
+service ..> enum
+
+' Model → Enum
+model ..> enum
+
+' Service → Exception
+service ..> exception
+
+' Controller → Exception
+controller ..> exception
+
+' Security → Service
+security ..> service
+
+@enduml

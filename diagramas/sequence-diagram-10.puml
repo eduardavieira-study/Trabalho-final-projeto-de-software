@@ -1,4 +1,5 @@
-@startuml UC12_ConsultarAgenda
+@startuml UC10_ConsultarAgenda
+
 skinparam backgroundColor #FAFAFA
 skinparam ArrowColor #555555
 skinparam SequenceLifeLineBorderColor #333333
@@ -8,13 +9,24 @@ participant "Sistema" as Sistema
 database "Banco de Dados" as BD
 
 Funcionario -> Sistema : consultarAgenda(funcionarioId, data)
-Sistema -> BD : buscarAtendimentos(funcionarioId, data)
-BD --> Sistema : listaDeAtendimentos
+activate Sistema
 
-alt atendimentos encontrados
-  Sistema --> Funcionario : exibirAgenda(listaDeAtendimentos)
-else nenhum atendimento no período
-  Sistema --> Funcionario : exibirMensagem("Nenhum atendimento para o período selecionado.")
+Sistema -> BD : buscarAtendimentos(funcionarioId, data)
+activate BD
+
+BD --> Sistema : listaAtendimentos
+deactivate BD
+
+alt Existem atendimentos
+
+    Sistema --> Funcionario : exibirAgenda(listaAtendimentos)
+
+else Nenhum atendimento encontrado
+
+    Sistema --> Funcionario : exibirMensagem(\n"Nenhum atendimento encontrado")
+
 end
+
+deactivate Sistema
 
 @enduml

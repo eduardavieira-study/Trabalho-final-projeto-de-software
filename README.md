@@ -89,7 +89,7 @@ Link do docs: https://docs.google.com/document/d/11q0u9j5XEwsP1aPY_aP4BVvTcwR-SK
   > 💻 **Descrição:** Link para a aplicação em ambiente de produção (Ex: hospedado na Vercel, Netlify ou AWS S3).
 * 📱 **Download Mobile:** [App Store](<link-app-store>) | [Google Play](<link-google-play>) | [APK Direto](<link-para-apk-direto>)
   > 📱 **Descrição:** Links diretos para download nas lojas de aplicativos (se aplicável) e para o arquivo de instalação direta no Android (APK).
-* 📖 **Documentação:** [Leia a Wiki/Docs](<link-para-docs>)
+* 📖 **Documentação:** [Docs](https://docs.google.com/document/d/11q0u9j5XEwsP1aPY_aP4BVvTcwR-SKIJHqVxZbK4ggw/edit?usp=sharing)
   > 📚 **Descrição:** Acesso à documentação técnica completa do projeto (Ex: Swagger/OpenAPI para API, ou Wiki interna).
 
 ---

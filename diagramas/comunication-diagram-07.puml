@@ -1,0 +1,26 @@
+@startuml Comunicacao_Realizar_Agendamento
+
+top to bottom direction
+skinparam nodesep 80
+skinparam ranksep 50
+
+title Diagrama de Comunicação - UC-07: Realizar Agendamento
+
+actor "Cliente" as C
+rectangle "Frontend\n(Web)" as FE
+rectangle "AgendamentoController" as AC
+rectangle "AgendamentoService" as AS
+rectangle "AgendamentoRepository" as AR
+database "Banco de Dados" as DB
+
+C -- FE : "1: → selecionarHorario()\n10: ← exibeConfirmacao()"
+
+FE -- AC : "2: → realizarAgendamento(dados)"
+
+AC -- AS : "3: → realizarAgendamento(dados)"
+
+AS -- AR : "4: → verificarDisponibilidade()\n7: ← horarioDisponivel\n8: → salvarAgendamento()"
+
+AR -- DB : "5: → consultarAgenda()\n6: ← disponibilidade\n9: → inserirAgendamento()"
+
+@enduml

@@ -1,0 +1,170 @@
+@startuml Diagrama_Classes_DudaSpa
+
+skinparam backgroundColor #FAFAFA
+skinparam classAttributeIconSize 0
+skinparam classBackgroundColor #FFFFFF
+skinparam classBorderColor #333333
+skinparam ArrowColor #555555
+
+class Usuario {
+  -id: Long
+  -nome: String
+  -telefone: Stringp
+  -email: String
+  -senha: String
+
+  +login(): void
+  +recuperarSenha(): void
+}
+
+class Cliente {
+  -cpf: String
+  -historicoAtendimentos: List<Agendamento>
+
+  +atualizarCadastro(): void
+}
+
+class Funcionario {
+  -cargo: String
+  -especialidade: String
+
+  +registrarEvolucao(): void
+}
+
+class Recepcionista {
+
+}
+
+class Gerente {
+  +gerarRelatorio(): void
+}
+
+class Agendamento {
+  -id: Long
+  -dataHora: DateTime
+  -horarioChegada: DateTime
+  -observacao: String
+  -status: StatusAgendamento
+
+  +realizarCheckin(): void
+  +realizarAgendamento(): void
+  +cancelarAgendamento(): void
+  +concluirAgendamento(): void
+  +consultarAgendamento(): void
+}
+
+class Servico {
+  -id: Long
+  -nome: String
+  -descricao: String
+  -preco: Decimal
+  -duracaoMinutos: Integer
+  -ativo: Boolean
+
+  +adicionarServico(): void
+  +atualizarServico(): void
+  +removerServico(): void
+}
+
+class Pagamento {
+  -id: Long
+  -valor: Decimal
+  -dataPagamento: DateTime
+  -metodo: MetodoPagamento
+  -status: StatusPagamento
+
+  +registrarPagamento(): void
+  +cancelarPagamento(): void
+}
+
+class Comissao {
+  -id: Long
+  -valor: Decimal
+  -percentual: Decimal
+  -dataLancamento: DateTime
+
+  +calcularComissao(): Decimal
+}
+
+class Produto {
+  -id: Long
+  -nome: String
+  -descricao: String
+  -quantidade: Integer
+  -quantidadeMinima: Integer
+  -preco: Decimal
+
+  +adicionarProduto(): void
+  +atualizarProduto(): void
+  +removerProduto(): void
+}
+
+class Estoque {
+  -id: Long
+  -dataAtualizacao: DateTime
+
+  +verificarEstoqueMinimo(): Boolean
+  +atualizarEstoque(): void
+}
+
+class Promocao {
+  -id: Long
+  -titulo: String
+  -descricao: String
+  -desconto: Decimal
+  -dataInicio: DateTime
+  -dataFim: DateTime
+  -ativo: Boolean
+
+  +adicionarPromocao(): void
+  +atualizarPromocao(): void
+  +removerPromocao(): void
+}
+
+enum StatusAgendamento {
+  PENDENTE
+  CONFIRMADO
+  CHECKIN_REALIZADO
+  CONCLUIDO
+  CANCELADO
+}
+
+enum MetodoPagamento {
+  PIX
+  CARTAO_CREDITO
+  CARTAO_DEBITO
+  DINHEIRO
+}
+
+enum StatusPagamento {
+  PENDENTE
+  PAGO
+  CANCELADO
+}
+
+' Herança
+Usuario <|-- Cliente
+Usuario <|-- Funcionario
+Funcionario <|-- Recepcionista
+Funcionario <|-- Gerente
+
+' Relacionamentos
+Cliente "1" -- "0..*" Agendamento : realiza >
+Funcionario "1" -- "0..*" Agendamento : executa >
+
+Agendamento "1" -- "1" Servico : referente a >
+Agendamento "1" -- "0..1" Pagamento : gera >
+
+Funcionario "1" -- "0..*" Comissao : recebe >
+Comissao "1" -- "1" Agendamento : originada de >
+
+Estoque "1" -- "0..*" Produto : controla >
+
+Promocao "0..*" -- "0..*" Servico : aplicada em >
+
+' Enums
+Agendamento ..> StatusAgendamento
+Pagamento ..> MetodoPagamento
+Pagamento ..> StatusPagamento
+
+@enduml
