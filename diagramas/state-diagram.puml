@@ -1,0 +1,40 @@
+@startuml Diagrama_Estados_Agendamento
+
+skinparam state {
+  BackgroundColor LightBlue
+  BorderColor DarkBlue
+}
+
+title Diagrama de Estados - Agendamento (perspectiva do cliente e recepcionista)
+
+[*] --> Pendente
+
+Pendente : status = PENDENTE
+Pendente : pagamento = nao realizado
+
+Pendente --> Confirmado : confirmarAgendamento
+
+Confirmado : status = CONFIRMADO
+Confirmado : horario reservado
+
+Confirmado --> CheckinRealizado : realizarCheckin
+Confirmado --> Cancelado : cancelarAgendamento
+
+CheckinRealizado : status = CHECKIN_REALIZADO
+CheckinRealizado : cliente presente
+
+CheckinRealizado --> Concluido : concluirAtendimento
+
+Concluido : status = CONCLUIDO
+Concluido : atendimento finalizado
+
+Concluido --> Pago : registrarPagamento
+
+Pago : pagamento = realizado
+
+Cancelado : status = CANCELADO
+
+Pago --> [*]
+Cancelado --> [*]
+
+@enduml

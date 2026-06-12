@@ -1,0 +1,91 @@
+@startuml componentes
+
+title Diagrama de Componentes - Duda Spa
+
+skinparam nodesep 30
+skinparam ranksep 80
+
+skinparam component {
+  BackgroundColor #DDEEFF
+  BorderColor #336699
+  FontStyle bold
+}
+
+skinparam database {
+  BackgroundColor #FFF8DC
+  BorderColor #B8860B
+}
+
+skinparam interface {
+  BackgroundColor #FFFFFF
+  BorderColor #336699
+}
+
+node "Cliente" {
+    [Navegador Web] as WEB
+}
+
+[Frontend\n<<Next.js>>] as FRONT
+
+WEB --> FRONT : HTTPS
+
+[API REST\n<<Spring Boot>>] as API
+
+interface "REST" as iUSER
+interface "REST" as iAG
+interface "REST" as iSERV
+interface "REST" as iPAG
+interface "REST" as iPROM
+
+API --( iUSER
+API --( iAG
+API --( iSERV
+API --( iPAG
+API --( iPROM
+
+[Usuarios Service] as USERS
+[Agendamento Service] as AG
+[Servico Service] as SERV
+[Pagamento Service] as PAG
+[Promocao Service] as PROM
+
+USERS -up- iUSER
+AG -up- iAG
+SERV -up- iSERV
+PAG -up- iPAG
+PROM -up- iPROM
+
+interface "TCP/IP" as iDB2
+interface "TCP/IP" as iDB3
+interface "TCP/IP" as iDB4
+interface "TCP/IP" as iDB5
+interface "TCP/IP" as iDB7
+
+database "PostgreSQL" as DB
+
+USERS --( iDB2
+AG --( iDB3
+SERV --( iDB4
+PAG --( iDB5
+PROM --( iDB7
+
+iDB2 -down- DB
+iDB3 -down- DB
+iDB4 -down- DB
+iDB5 -down- DB
+iDB7 -down- DB
+
+FRONT --> API : HTTPS
+
+rectangle "Servicos Externos" as EXT #FCE4EC {
+    [Gmail SMTP] as GMAIL
+}
+
+AG --> GMAIL : Confirmacao
+AG --> GMAIL : Cancelamento
+
+USERS -[hidden]right- AG
+AG -[hidden]right- SERV
+SERV -[hidden]right- PAG
+
+@enduml

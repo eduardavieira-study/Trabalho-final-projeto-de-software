@@ -1,0 +1,138 @@
+@startuml DudaSpa_ER
+
+title Modelo Lógico de Dados - Duda Spa
+
+skinparam backgroundColor white
+skinparam entity {
+    BackgroundColor #F8F9FA
+    BorderColor #333333
+}
+
+entity usuario {
+    + id : INTEGER
+    --
+    nome : VARCHAR
+    telefone : VARCHAR
+    email : VARCHAR
+    senha : VARCHAR
+}
+
+entity cliente {
+    + id : INTEGER <<PK, FK>>
+    --
+    cpf : VARCHAR
+}
+
+entity funcionario {
+    + id : INTEGER <<PK, FK>>
+    --
+    cargo : VARCHAR
+    especialidade : VARCHAR
+}
+
+entity recepcionista {
+    + id : INTEGER <<PK, FK>>
+}
+
+entity gerente {
+    + id : INTEGER <<PK, FK>>
+}
+
+entity servico {
+    + id : INTEGER
+    --
+    nome : VARCHAR
+    descricao : VARCHAR
+    preco : DECIMAL
+    duracao_minutos : INTEGER
+    ativo : BOOLEAN
+}
+
+entity agendamento {
+    + id : INTEGER
+    --
+    data_hora : TIMESTAMP
+    horario_chegada : TIMESTAMP
+    observacao : VARCHAR
+    status : VARCHAR
+
+    cliente_id : INTEGER <<FK>>
+    funcionario_id : INTEGER <<FK>>
+    servico_id : INTEGER <<FK>>
+}
+
+entity pagamento {
+    + id : INTEGER
+    --
+    valor : DECIMAL
+    data_pagamento : TIMESTAMP
+    metodo : VARCHAR
+    status : VARCHAR
+
+    agendamento_id : INTEGER <<FK>>
+}
+
+entity comissao {
+    + id : INTEGER
+    --
+    valor : DECIMAL
+    percentual : DECIMAL
+    data_lancamento : TIMESTAMP
+
+    funcionario_id : INTEGER <<FK>>
+    agendamento_id : INTEGER <<FK>>
+}
+
+entity produto {
+    + id : INTEGER
+    --
+    nome : VARCHAR
+    descricao : VARCHAR
+    quantidade : INTEGER
+    quantidade_minima : INTEGER
+    preco : DECIMAL
+    data_atualizacao : TIMESTAMP
+}
+
+entity promocao {
+    + id : INTEGER
+    --
+    titulo : VARCHAR
+    descricao : VARCHAR
+    desconto : DECIMAL
+    data_inicio : TIMESTAMP
+    data_fim : TIMESTAMP
+    ativo : BOOLEAN
+}
+
+entity promocao_servico {
+    + promocao_id : INTEGER <<FK>>
+    + servico_id : INTEGER <<FK>>
+}
+
+'=========================
+' HERANÇA (ESPECIALIZAÇÃO)
+'=========================
+
+usuario ||--|| cliente
+usuario ||--|| funcionario
+usuario ||--|| recepcionista
+usuario ||--|| gerente
+
+'=========================
+' RELACIONAMENTOS
+'=========================
+
+cliente ||--o{ agendamento
+funcionario ||--o{ agendamento
+servico ||--o{ agendamento
+
+agendamento ||--o| pagamento
+
+funcionario ||--o{ comissao
+agendamento ||--|| comissao
+
+promocao ||--o{ promocao_servico
+servico ||--o{ promocao_servico
+
+@enduml

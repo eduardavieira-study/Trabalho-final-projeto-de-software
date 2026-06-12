@@ -1,0 +1,145 @@
+@startuml DSS_Geral_DudaSpa
+
+autonumber
+
+skinparam backgroundColor #FAFAFA
+skinparam ArrowColor #555555
+
+actor Cliente
+actor Funcionario
+actor Recepcionista
+actor Gerente
+
+participant Sistema
+database "Banco de Dados" as BD
+
+== Realizar Agendamento ==
+
+Cliente -> Sistema : consultarHorariosDisponiveis(servicoId,\nprofissionalId,data)
+activate Sistema
+
+Sistema -> BD : buscarHorarios(servicoId,\nprofissionalId,data)
+activate BD
+BD --> Sistema : horariosDisponiveis
+deactivate BD
+
+Sistema --> Cliente : exibirHorarios(horarios)
+
+Cliente -> Sistema : realizarAgendamento(clienteId,\nservicoId,profissionalId,horario)
+
+Sistema -> BD : salvarAgendamento(clienteId,\nservicoId,profissionalId,horario)
+activate BD
+BD --> Sistema : agendamentoCriado
+deactivate BD
+
+Sistema --> Cliente : confirmarAgendamento()
+deactivate Sistema
+
+== Consultar Agenda ==
+
+Funcionario -> Sistema : consultarAgenda(funcionarioId,data)
+activate Sistema
+
+Sistema -> BD : buscarAgenda(funcionarioId,data)
+activate BD
+BD --> Sistema : listaAtendimentos
+deactivate BD
+
+Sistema --> Funcionario : exibirAgenda()
+deactivate Sistema
+
+== Registrar Evolução ==
+
+Funcionario -> Sistema : registrarEvolucao(\nagendamentoId,observacao)
+activate Sistema
+
+Sistema -> BD : salvarEvolucao()
+activate BD
+BD --> Sistema : evolucaoRegistrada
+deactivate BD
+
+Sistema --> Funcionario : confirmarRegistro()
+deactivate Sistema
+
+== Realizar Check-in ==
+
+Recepcionista -> Sistema : localizarAgendamento(clienteId)
+activate Sistema
+
+Sistema -> BD : buscarAgendamento(clienteId)
+activate BD
+BD --> Sistema : dadosAgendamento
+deactivate BD
+
+Sistema --> Recepcionista : exibirAgendamento()
+
+Recepcionista -> Sistema : realizarCheckin(agendamentoId)
+
+Sistema -> BD : atualizarStatusCheckin()
+activate BD
+BD --> Sistema : checkinRealizado
+deactivate BD
+
+Sistema --> Recepcionista : confirmarCheckin()
+deactivate Sistema
+
+== Registrar Pagamento ==
+
+Recepcionista -> Sistema : registrarPagamento(\nagendamentoId,valor,metodo)
+activate Sistema
+
+Sistema -> BD : salvarPagamento()
+activate BD
+BD --> Sistema : pagamentoRegistrado
+deactivate BD
+
+Sistema --> Recepcionista : comprovantePagamento()
+deactivate Sistema
+
+== Gestão Administrativa ==
+
+Gerente -> Sistema : gerarRelatorio(periodo)
+activate Sistema
+
+Sistema -> BD : consultarDadosFinanceiros(periodo)
+activate BD
+BD --> Sistema : dadosFinanceiros
+deactivate BD
+
+Sistema --> Gerente : exibirRelatorio()
+deactivate Sistema
+
+Gerente -> Sistema : atualizarProduto(\nprodutoId,quantidade)
+activate Sistema
+
+Sistema -> BD : atualizarProduto()
+activate BD
+BD --> Sistema : produtoAtualizado
+deactivate BD
+
+Sistema --> Gerente : confirmarAtualizacao()
+deactivate Sistema
+
+Gerente -> Sistema : gerenciarServico(servicoId)
+activate Sistema
+
+Sistema -> BD : atualizarServico()
+activate BD
+BD --> Sistema : servicoAtualizado
+deactivate BD
+
+Sistema --> Gerente : confirmarServico()
+deactivate Sistema
+
+Gerente -> Sistema : gerenciarPromocao(promocaoId)
+activate Sistema
+
+Sistema -> BD : atualizarPromocao()
+activate BD
+BD --> Sistema : promocaoAtualizada
+deactivate BD
+
+Sistema --> Gerente : confirmarPromocao()
+deactivate Sistema
+
+@enduml

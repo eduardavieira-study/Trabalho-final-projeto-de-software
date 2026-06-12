@@ -9,7 +9,7 @@ skinparam ArrowColor #555555
 class Usuario {
   -id: Long
   -nome: String
-  -telefone: Stringp
+  -telefone: String
   -email: String
   -senha: String
 
@@ -32,7 +32,8 @@ class Funcionario {
 }
 
 class Recepcionista {
-
+  +realizarCheckin(): void
+  +registrarPagamento(): void
 }
 
 class Gerente {
@@ -46,11 +47,10 @@ class Agendamento {
   -observacao: String
   -status: StatusAgendamento
 
-  +realizarCheckin(): void
   +realizarAgendamento(): void
   +cancelarAgendamento(): void
-  +concluirAgendamento(): void
   +consultarAgendamento(): void
+  +concluirAgendamento(): void
 }
 
 class Servico {
@@ -93,18 +93,11 @@ class Produto {
   -quantidade: Integer
   -quantidadeMinima: Integer
   -preco: Decimal
+  -dataAtualizacao: DateTime
 
   +adicionarProduto(): void
   +atualizarProduto(): void
   +removerProduto(): void
-}
-
-class Estoque {
-  -id: Long
-  -dataAtualizacao: DateTime
-
-  +verificarEstoqueMinimo(): Boolean
-  +atualizarEstoque(): void
 }
 
 class Promocao {
@@ -142,27 +135,37 @@ enum StatusPagamento {
   CANCELADO
 }
 
-' Herança
+' =========================
+' HERANÇA
+' =========================
+
 Usuario <|-- Cliente
 Usuario <|-- Funcionario
-Funcionario <|-- Recepcionista
-Funcionario <|-- Gerente
+Usuario <|-- Recepcionista
+Usuario <|-- Gerente
 
-' Relacionamentos
+' =========================
+' RELACIONAMENTOS
+' =========================
+
 Cliente "1" -- "0..*" Agendamento : realiza >
+
 Funcionario "1" -- "0..*" Agendamento : executa >
 
 Agendamento "1" -- "1" Servico : referente a >
+
 Agendamento "1" -- "0..1" Pagamento : gera >
 
 Funcionario "1" -- "0..*" Comissao : recebe >
-Comissao "1" -- "1" Agendamento : originada de >
 
-Estoque "1" -- "0..*" Produto : controla >
+Comissao "1" -- "1" Agendamento : originada de >
 
 Promocao "0..*" -- "0..*" Servico : aplicada em >
 
-' Enums
+' =========================
+' ENUMS
+' =========================
+
 Agendamento ..> StatusAgendamento
 Pagamento ..> MetodoPagamento
 Pagamento ..> StatusPagamento

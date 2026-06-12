@@ -49,7 +49,6 @@ rectangle "Render - Container Docker Backend" as DOCKER #FFF3E0 {
     interface "REST" as iAG
     interface "REST" as iSERV
     interface "REST" as iPAG
-    interface "REST" as iEST
     interface "REST" as iPROM
 
 
@@ -57,7 +56,6 @@ rectangle "Render - Container Docker Backend" as DOCKER #FFF3E0 {
     API --( iAG
     API --( iSERV
     API --( iPAG
-    API --( iEST
     API --( iPROM
 
 
@@ -69,8 +67,6 @@ rectangle "Render - Container Docker Backend" as DOCKER #FFF3E0 {
 
     [Pagamento Service] as PAG
 
-    [Estoque Service] as EST
-
     [Promocao Service] as PROM
 
 
@@ -78,7 +74,6 @@ rectangle "Render - Container Docker Backend" as DOCKER #FFF3E0 {
     AG -up- iAG
     SERV -up- iSERV
     PAG -up- iPAG
-    EST -up- iEST
     PROM -up- iPROM
 
 
@@ -86,7 +81,6 @@ rectangle "Render - Container Docker Backend" as DOCKER #FFF3E0 {
     interface "TCP/IP" as iDB3
     interface "TCP/IP" as iDB4
     interface "TCP/IP" as iDB5
-    interface "TCP/IP" as iDB6
     interface "TCP/IP" as iDB7
 
     database "PostgreSQL" as DB
@@ -96,7 +90,6 @@ rectangle "Render - Container Docker Backend" as DOCKER #FFF3E0 {
     AG --( iDB3
     SERV --( iDB4
     PAG --( iDB5
-    EST --( iDB6
     PROM --( iDB7
 
 
@@ -104,7 +97,6 @@ rectangle "Render - Container Docker Backend" as DOCKER #FFF3E0 {
     iDB3 -down- DB
     iDB4 -down- DB
     iDB5 -down- DB
-    iDB6 -down- DB
     iDB7 -down- DB
 
 }
@@ -124,8 +116,7 @@ AG --> GMAIL : Cancelamento
 USERS -[hidden]right- AG
 AG -[hidden]right- SERV
 SERV -[hidden]right- PAG
-PAG -[hidden]right- EST
-EST -[hidden]right- PROM
+
 
 DOCKER -[hidden]down- EXT
 
