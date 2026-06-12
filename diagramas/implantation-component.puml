@@ -27,15 +27,11 @@ skinparam interface {
 }
 
 node "Cliente" {
-
     [Navegador Web] as WEB
-
 }
 
 rectangle "Vercel" as VERCEL #FFFDE7 {
-
     [Frontend\n<<Next.js>>] as FRONT
-
 }
 
 WEB --> FRONT : HTTPS
@@ -44,79 +40,71 @@ rectangle "Render - Container Docker Backend" as DOCKER #FFF3E0 {
 
     [API REST\n<<Spring Boot>>] as API
 
-
     interface "REST" as iUSER
     interface "REST" as iAG
     interface "REST" as iSERV
+    interface "REST" as iPROD
     interface "REST" as iPAG
     interface "REST" as iPROM
-
 
     API --( iUSER
     API --( iAG
     API --( iSERV
+    API --( iPROD
     API --( iPAG
     API --( iPROM
 
-
-    [Usuarios Service\n] as USERS
-
+    [Usuarios Service] as USERS
     [Agendamento Service] as AG
-
     [Servico Service] as SERV
-
+    [Produto Service] as PROD
     [Pagamento Service] as PAG
-
     [Promocao Service] as PROM
-
 
     USERS -up- iUSER
     AG -up- iAG
     SERV -up- iSERV
+    PROD -up- iPROD
     PAG -up- iPAG
     PROM -up- iPROM
-
 
     interface "TCP/IP" as iDB2
     interface "TCP/IP" as iDB3
     interface "TCP/IP" as iDB4
     interface "TCP/IP" as iDB5
+    interface "TCP/IP" as iDB6
     interface "TCP/IP" as iDB7
 
     database "PostgreSQL" as DB
-
 
     USERS --( iDB2
     AG --( iDB3
     SERV --( iDB4
     PAG --( iDB5
+    PROD --( iDB6
     PROM --( iDB7
-
 
     iDB2 -down- DB
     iDB3 -down- DB
     iDB4 -down- DB
     iDB5 -down- DB
+    iDB6 -down- DB
     iDB7 -down- DB
-
 }
 
 FRONT --> API : HTTPS
 
 rectangle "Servicos Externos" as EXT #FCE4EC {
-
     [Gmail SMTP] as GMAIL
-
 }
-
 
 AG --> GMAIL : Confirmacao
 AG --> GMAIL : Cancelamento
 
 USERS -[hidden]right- AG
 AG -[hidden]right- SERV
-SERV -[hidden]right- PAG
-
+SERV -[hidden]right- PROD
+PROD -[hidden]right- PAG
 
 DOCKER -[hidden]down- EXT
 
