@@ -74,7 +74,7 @@ Abaixo estão os indicadores do status atual de desenvolvimento e integração d
 ---
 
 ## 🔗 Links Úteis
-* 📖 **Documentação de Requisitos e Visão:** [Google Docs - Duda Spa](https://docs.google.com/document/d/11q0u9j5XEwsP1aPY_aP4BVvTcwR-SKIJHqVxZbK4ggw/edit?usp=sharing)
+* 📖 **Documentação de Requisitos e Visão:** [PDF - Duda Spa](Trabalho2-DocumentacaoProjeto.pdf)
 * 📐 **Arquivos de Modelagem (PlantUML):** [Pasta de Diagramas (PUML)](diagramas)
 * 🖼️ **Imagens de Diagramas Renderizados:** [Pasta de Imagens (PNG)](images)
 
