@@ -32,7 +32,7 @@ node "Cliente" {
 
 }
 
-rectangle "Render" as RENDER #FFFDE7 {
+rectangle "Vercel" as VERCEL #FFFDE7 {
 
     [Frontend\n<<Next.js>>] as FRONT
 
