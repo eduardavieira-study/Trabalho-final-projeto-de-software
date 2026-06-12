@@ -14,10 +14,8 @@
       <b>Contexto:</b> Trabalho final desenvolvido para a disciplina de <b>Projeto de Software</b> (4º período do curso de Engenharia de Software - PUC Minas). <br>
       <b>Data de Entrega:</b> 07/06/2026
     </td>
-    <td>
-      <div align="center">
-        <img src="images/duda_spa_logo.png" alt="Logo Duda Spa" width="160px"/>
-      </div>
+    <td width="300px" align="center">
+        <img src="images/duda_spa_logo.png" alt="Logo Duda Spa" width="300px">
     </td>
   </tr> 
 </table>
