@@ -1,26 +1,22 @@
-<!-- Este template foi criado para servir como referência e pode ser facilmente adaptado para diferentes projetos de desenvolvimento -->
-
-<!-- [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=99999999&assignment_repo_type=AssignmentRepo) [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=99999999)
--->
+<!-- Documentação do Projeto Duda Spa - Versão 1.0 -->
 
 # 🧴 Duda Spa
-
-Trabalho final da matéria de projetos de software feito no 4 periodo do curso de engenharia de software em 2026
-Link do docs: https://docs.google.com/document/d/11q0u9j5XEwsP1aPY_aP4BVvTcwR-SKIJHqVxZbK4ggw/edit?usp=sharing
-> [!NOTE]
-> Breve descrição do projeto. **Foque no principal valor/benefício.**  
-> Crie uma **logo** para o projeto que represente a aplicação em questão.
 
 <table>
   <tr>
     <td width="800px">
       <div align="justify">
-        Este <b>README.md</b> apresenta um template organizado, ideal para servir como referência acadêmica e profissional em projetos de desenvolvimento, desde trabalhos da faculdade até projetos desenvolvidos para etapas técnicas de processos seletivos. Ele reúne as <i>seções essenciais</i> recomendadas pelo <a href="https://github.com/joaopauloaramuni">Prof. Dr. João Paulo Aramuni</a>, permitindo <i>organização clara</i>, <i>documentação eficiente</i> e <i>padronização</i> entre diferentes trabalhos. O objetivo deste esqueleto é <b>facilitar a construção de projetos bem documentados</b>, oferecendo um <i>guia completo</i> que inclui <b>boas práticas</b>, instruções de execução, tecnologias utilizadas, arquitetura, estruturas de pastas, testes, links úteis e orientações para colaboração. Esse template ajuda estudantes a desenvolverem <b>documentação de qualidade profissional</b> desde os primeiros períodos, promovendo <i>clareza</i>, <i>reprodutibilidade</i> e <i>padronização</i> nos projetos.
+        O <b>Duda Spa</b> é um sistema web de gerenciamento projetado especificamente para spas de beleza e bem-estar. Este projeto tem como objetivo digitalizar e centralizar as operações do estabelecimento, desde o agendamento online de clientes até o controle de comissões de funcionários, gestão financeira, estoque de produtos e administração de campanhas promocionais. A solução elimina processos manuais e ineficiências operacionais, garantindo maior produtividade para a equipe e uma experiência ágil para o cliente final.
       </div>
+      <br>
+      <b>Versão:</b> 1.0 <br>
+      <b>Elaborado por:</b> Eduarda Vieira Gonçalves <br>
+      <b>Contexto:</b> Trabalho final desenvolvido para a disciplina de <b>Projeto de Software</b> (4º período do curso de Engenharia de Software - PUC Minas). <br>
+      <b>Data de Entrega:</b> 07/06/2026
     </td>
     <td>
-      <div>
-        <img src="https://joaopauloaramuni.github.io/image/logo_ES_vertical.png" alt="Logo do Projeto" width="120px"/>
+      <div align="center">
+        <img src="images/duda_spa_logo.png" alt="Logo Duda Spa" width="160px"/>
       </div>
     </td>
   </tr> 
@@ -30,717 +26,530 @@ Link do docs: https://docs.google.com/document/d/11q0u9j5XEwsP1aPY_aP4BVvTcwR-SK
 
 ## 🚧 Status do Projeto
 
-### Exemplos de badges básicos:
+Abaixo estão os indicadores do status atual de desenvolvimento e integração do projeto de documentação e arquitetura:
 
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/joaopauloaramuni/joaopauloaramuni/main.yml?branch=main)](https://github.com/joaopauloaramuni/joaopauloaramuni/actions/workflows/main.yml)
-[![Test Coverage](https://codecov.io/gh/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software/branch/main/graph/badge.svg)](https://codecov.io/gh/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software)
-[![Versão](https://img.shields.io/badge/Versão-v1.0.0-blue)](https://github.com/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software/releases)
 [![Licença](https://img.shields.io/github/license/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software)](#licença)
-
-### Outros exemplos de badges:
-
- ![Next.js](https://img.shields.io/badge/Next.js-black?logo=next.js&logoColor=white) ![Java](https://img.shields.io/badge/Java-%23ED8B00.svg?logo=openjdk&logoColor=white) ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?logo=springboot&logoColor=fff) ![Postgres](https://img.shields.io/badge/Postgres-%23316192.svg?logo=postgresql&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=fff) ![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-000?logo=shadcnui&logoColor=fff) ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-%2338B2AC.svg?logo=tailwind-css&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff) ![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white) ![GitHub stars](https://img.shields.io/github/stars/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software?style=for-the-badge&logo=github) ![GitHub forks](https://img.shields.io/github/forks/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software?style=for-the-badge&logo=git) ![GitHub language count](https://img.shields.io/github/languages/count/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software?style=for-the-badge&logo=python) ![GitHub license](https://img.shields.io/github/license/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software?style=for-the-badge&color=007ec6&logo=opensourceinitiative) ![GitHub last commit](https://img.shields.io/github/last-commit/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software?style=for-the-badge&logo=clockify) ![Vercel](https://vercelbadge.vercel.app/api/joaopauloaramuni/joaopauloaramuni-portfolio?style=for-the-badge) ![Views Counter](https://views-counter.vercel.app/badge?pageId=https%3A%2F%2Fgithub%2Ecom%2Fjoaopauloaramuni%2Flaboratorio-de-desenvolvimento-de-software&leftColor=555555&rightColor=007ec6&type=total&label=RepoViews)
+![Versão](https://img.shields.io/badge/Vers%C3%A3o-v1.0-blue)
+![Arquitetura](https://img.shields.io/badge/Arquitetura-MVC%20%2F%20Layered-orange)
+![Banco de Dados](https://img.shields.io/badge/Banco%20de%20Dados-PostgreSQL%2016-blue)
+![Frontend](https://img.shields.io/badge/Frontend-Next.js%20%2F%20TypeScript-black)
+![Backend](https://img.shields.io/badge/Backend-Spring%20Boot%20%2F%20Java%2017-green)
 
 ---
 
 ## 📚 Índice
-- [Links Úteis](#-links-úteis)
-- [Sobre o Projeto](#-sobre-o-projeto)
-- [Funcionalidades Principais](#-funcionalidades-principais)
-- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
-- [Arquitetura](#-arquitetura)
-  - [Exemplos de diagramas](#exemplos-de-diagramas)
-- [Instalação e Execução](#-instalação-e-execução)
+- [🔗 Links Úteis](#-links-úteis)
+- [1. Introdução](#1-introdução)
+  - [1.1 Contextualização](#11-contextualização)
+- [2. Modelos de Usuário e Requisitos](#2-modelos-de-usuário-e-requisitos)
+  - [2.1 Descrição de Atores](#21-descrição-de-atores)
+  - [2.2 Modelo de Casos de Uso e Histórias de Usuários](#22-modelo-de-casos-de-uso-e-histórias-de-usuários)
+    - [2.2.1 Histórias de Usuário](#221-histórias-de-usuário)
+    - [2.2.2 Casos de Uso](#222-casos-de-uso)
+  - [2.3 Diagrama de Sequência do Sistema (DSS)](#23-diagrama-de-sequência-do-sistema-dss)
+- [3. Modelos de Projeto](#3-modelos-de-projeto)
+  - [3.1 Arquitetura do Sistema](#31-arquitetura-do-sistema)
+  - [3.2 Diagrama de Componentes e Implantação](#32-diagrama-de-componentes-e-implantação)
+  - [3.3 Diagrama de Classes](#33-diagrama-de-classes)
+  - [3.4 Diagramas de Sequência por Caso de Uso](#34-diagramas-de-sequência-por-caso-de-uso)
+  - [3.5 Diagramas de Comunicação](#35-diagramas-de-comunicação)
+  - [3.6 Diagramas de Estados](#36-diagramas-de-estados)
+- [4. Modelos de Dados](#4-modelos-de-dados)
+- [🛠 Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [🔧 Instalação e Execução](#-instalação-e-execução)
   - [Pré-requisitos](#pré-requisitos)
-  - [Variáveis de Ambiente](#-variáveis-de-ambiente)
-     - [1 Back-end (Spring Boot)](#1-back-end-spring-boot)
-     - [2 Front-end (React, Vite)](#2-front-end-react-vite)
-     - [3 Exemplos de Variáveis de Ambiente na Vercel](#3-exemplos-de-variáveis-de-ambiente-na-vercel)
-  - [Instalação de Dependências](#-instalação-de-dependências)
-    - [Front-end (React)](#front-end-react)
-    - [Back-end (Spring Boot)](#back-end-spring-boot)
-  - [Inicialização do Banco de Dados (PostgreSQL)](#-inicialização-do-banco-de-dados-postgresql)
-  - [Como Executar a Aplicação](#-como-executar-a-aplicação)
-    - [Terminal 1: Back-end (Spring Boot)](#terminal-1-back-end-spring-boot)
-    - [Terminal 2: Front-end (React, Vite)](#terminal-2-front-end-react-vite)
-    - [Execução Local Completa com Docker Compose (Incluindo Banco de Dados)](#-execução-local-completa-com-docker-compose-incluindo-banco-de-dados)
-    - [Passos para build, inicialização e execução](#-passos-para-build-inicialização-e-execução)
-- [Deploy](#-deploy)
-- [Estrutura de Pastas](#-estrutura-de-pastas)
-- [Demonstração](#-demonstração)
-  - [Aplicativo Mobile](#-aplicativo-mobile)
-  - [Aplicação Web](#-aplicação-web)
-  - [Exemplo de saída no Terminal (para Back-end, API, CLI)](#-exemplo-de-saída-no-terminal-para-back-end-api-cli)
-- [Testes](#-testes)
-- [Documentações utilizadas](#-documentações-utilizadas)
-- [Autores](#-autores)
-- [Contribuição](#-contribuição)
-- [Agradecimentos](#-agradecimentos)
-- [Licença](#-licença)
+  - [🔑 Variáveis de Ambiente](#-variáveis-de-ambiente)
+  - [📦 Instalação de Dependências](#-instalação-de-dependências)
+  - [💾 Inicialização do Banco de Dados](#-inicialização-do-banco-de-dados-postgresql)
+  - [⚡ Como Executar a Aplicação](#-como-executar-a-aplicação)
+- [🚀 Deploy](#-deploy)
+- [📂 Estrutura de Pastas](#-estrutura-de-pastas)
+- [🧪 Testes](#-testes)
+- [🔗 Documentações Utilizadas](#-documentações-utilizadas)
+- [👥 Autores](#-autores)
+- [🤝 Contribuição](#-contribuição)
+- [🙏 Agradecimentos](#-agradecimentos)
+- [📄 Licença](#-licença)
 
 ---
 
 ## 🔗 Links Úteis
-* 🌐 **Demo Online:** [Acesse a Aplicação Web](<link-da-demo-web>)
-  > 💻 **Descrição:** Link para a aplicação em ambiente de produção (Ex: hospedado na Vercel, Netlify ou AWS S3).
-* 📱 **Download Mobile:** [App Store](<link-app-store>) | [Google Play](<link-google-play>) | [APK Direto](<link-para-apk-direto>)
-  > 📱 **Descrição:** Links diretos para download nas lojas de aplicativos (se aplicável) e para o arquivo de instalação direta no Android (APK).
-* 📖 **Documentação:** [Docs](https://docs.google.com/document/d/11q0u9j5XEwsP1aPY_aP4BVvTcwR-SKIJHqVxZbK4ggw/edit?usp=sharing)
-  > 📚 **Descrição:** Acesso à documentação técnica completa do projeto (Ex: Swagger/OpenAPI para API, ou Wiki interna).
+* 📖 **Documentação de Requisitos e Visão:** [Google Docs - Duda Spa](https://docs.google.com/document/d/11q0u9j5XEwsP1aPY_aP4BVvTcwR-SKIJHqVxZbK4ggw/edit?usp=sharing)
+* 📐 **Arquivos de Modelagem (PlantUML):** [Pasta de Diagramas (PUML)](diagramas)
+* 🖼️ **Imagens de Diagramas Renderizados:** [Pasta de Imagens (PNG)](images)
 
 ---
 
-## 📝 Sobre o Projeto
-Nesta seção, descreva de forma clara e objetiva **o propósito do seu projeto**, explicando:
+## 1. Introdução
+Este documento agrega: 1) a elaboração e revisão de modelos de domínio e 2) modelos de projeto para o sistema **Duda Spa**. A referência principal para a descrição geral do problema, domínio e requisitos do sistema é o documento de especificação que descreve a visão de domínio do sistema. Tal especificação acompanha este documento.
 
-- **Por que ele existe** — qual motivação levou à sua criação.  
-- **Qual problema ele resolve** — que dor, necessidade ou oportunidade ele atende.  
-- **Qual o contexto** — acadêmico, profissional, pessoal, experimental, etc.  
-- **Onde ele pode ser utilizado** — cenários reais ou simulados.  
+### 1.1 Contextualização
+O atendimento em spas e espaços de beleza e bem-estar ainda depende amplamente de processos manuais: agendamentos feitos por telefone, controle de agenda em papel ou planilhas, cobranças sem registro centralizado e ausência de histórico digital dos atendimentos. Essas limitações geram ineficiências operacionais, erros de comunicação entre equipe e clientes, e dificuldades na gestão financeira do negócio.
 
-Procure responder perguntas como:
-- *Qual foi a ideia inicial do projeto?*
-- *O que ele entrega de valor ao usuário?*
-- *Por que alguém utilizaria ou contribuiria com esse projeto?*
-- *O que o torna relevante ou interessante?*
+Nesse contexto, surge o **Duda Spa**, um sistema web de gerenciamento voltado para spas de beleza e bem-estar, com o objetivo de digitalizar e centralizar os processos do estabelecimento. A solução oferece aos clientes uma experiência de agendamento prática e online, com visualização de serviços, promoções e profissionais disponíveis. Para a equipe interna, o sistema disponibiliza ferramentas eficientes para organização da agenda, registro de evoluções de atendimento e lançamento de comissões. Já para a gestão, centraliza o controle financeiro, o estoque de produtos e o gerenciamento de promoções e serviços.
 
-Escreva de forma objetiva, mas completa, para que qualquer pessoa entenda rapidamente **o que é** e **por que importa**.
-
-> [!NOTE]
-> Esta seção segue boas práticas de documentação profissional e deve ser ajustada conforme o tipo e o objetivo do seu projeto.
+O sistema contempla cinco perfis de usuário: o **Cliente**, que realiza e cancela agendamentos online; o **Funcionário**, que consulta sua agenda e registra os atendimentos; a **Recepcionista**, responsável pelo fluxo presencial de check-in e cobrança; o **Gerente**, que acompanha o desempenho financeiro e operacional; e o **Usuário**, perfil base do qual todos os demais herdam as funcionalidades de acesso ao sistema.
 
 ---
 
-## ✨ Funcionalidades Principais
-Liste as funcionalidades de forma clara e objetiva.
+## 2. Modelos de Usuário e Requisitos
+Esta seção tem como objetivo descrever os usuários e atores do sistema, assim como os requisitos aos quais ele deve atender. Para isso, é apresentada uma breve descrição de cada ator, seguida do diagrama de casos de uso e das histórias de usuário relacionadas, que servem de referência para o desenvolvimento do sistema. Por fim, são apresentados os diagramas de sequência do sistema e os contratos de operações, responsáveis por definir como os atores interagem com o sistema em cada fluxo principal.
 
-- 🔐 **Autenticação Segura:** Login, Cadastro e Recuperação de Senha.
-- 📈 **Painel de Controle:** Visualização de dados em tempo real com gráficos.
-- ⚙️ **Gerenciamento de CRUD:** Criação, Leitura, Atualização e Deleção de recursos (e.g., Usuários, Itens, Posts).
-- 📊 **Relatórios Exportáveis:** Exportação de dados em PDF, CSV ou Excel.
-- 🌐 **Internacionalização (i18n):** Suporte a múltiplos idiomas.
-- 🧵 **Logs e Monitoramento:** Registro detalhado de atividades e análise de desempenho.
-- 🔄 **Integração com APIs Externas:** Conexão com serviços de terceiros (pagamentos, mapas, autenticação, etc.).
-- 📨 **Sistema de Notificações:** Envio de alertas por e-mail, push ou notificações internas.
+### 2.1 Descrição de Atores
+
+| Ator | Descrição |
+|---|---|
+| **Usuário** | Qualquer pessoa que acessa o sistema. Pode gerenciar sua conta, fazer login e recuperar senha. Todos os demais atores herdam deste. |
+| **Cliente** | Usuário autenticado que consome os serviços do spa. Visualiza serviços, promoções e profissionais, consulta horários disponíveis e realiza ou cancela agendamentos. O pagamento é feito presencialmente no dia do atendimento. |
+| **Funcionário** | Profissional do spa. Consulta sua agenda de atendimentos, registra a evolução dos clientes e lança suas comissões. |
+| **Recepcionista** | Responsável pelo atendimento presencial. Cadastra clientes, gerencia os agendamentos da equipe (incluindo reagendamentos), localiza agendamentos de clientes, realiza check-ins e realiza a cobrança no dia do atendimento. |
+| **Gerente** | Responsável pela gestão do negócio. Acompanha relatórios financeiros, controla o estoque de produtos e gerencia promoções e serviços. |
+
+### 2.2 Modelo de Casos de Uso e Histórias de Usuários
+Esta subseção tem como objetivo descrever os modelos de usuários desenvolvidos por meio da implementação de personas. As personas representam perfis fictícios baseados nos usuários reais do sistema, permitindo compreender melhor suas necessidades, objetivos e dificuldades durante a utilização do Duda Spa.
+
+#### 👤 Persona 1: Mariana (Cliente)
+* **Descrição:** Mariana tem 32 anos e trabalha como analista administrativa. Possui uma rotina corrida e procura momentos de relaxamento para cuidar da saúde e bem-estar. Utiliza frequentemente aplicativos para realizar agendamentos online e valoriza praticidade e rapidez nos serviços.
+* **Dores:**
+  * Dificuldade para agendar horários por telefone.
+  * Falta de informações sobre serviços e profissionais disponíveis.
+* **Objetivos:**
+  * Agendar atendimentos de forma rápida.
+  * Escolher profissionais com base em suas especialidades.
+  * Acompanhar seus agendamentos facilmente.
+
+#### 👤 Persona 2: Carlos (Massoterapeuta / Funcionário)
+* **Descrição:** Carlos tem 29 anos e atua como massoterapeuta no spa. Atende diversos clientes diariamente e precisa manter sua agenda organizada para oferecer um atendimento de qualidade.
+* **Dores:**
+  * Dificuldade para acompanhar alterações na agenda.
+  * Falta de histórico organizado dos atendimentos realizados.
+* **Objetivos:**
+  * Visualizar seus atendimentos de forma clara.
+  * Registrar evoluções dos clientes rapidamente.
+
+#### 👤 Persona 3: Fernanda (Recepcionista)
+* **Descrição:** Fernanda tem 35 anos e é responsável pelo atendimento presencial do spa. Ela realiza check-ins, reagendamentos e cobranças diariamente.
+* **Dores:**
+  * Perda de tempo procurando agendamentos manualmente.
+  * Erros em cobranças e registros.
+* **Objetivos:**
+  * Encontrar rapidamente informações dos clientes.
+  * Agilizar check-ins e pagamentos.
+
+#### 👤 Persona 4: Patrícia (Proprietária / Gerente)
+* **Descrição:** Patrícia é proprietária do spa e acompanha indicadores financeiros e operacionais para apoiar a tomada de decisão.
+* **Dores:**
+  * Falta de visão consolidada do desempenho do negócio.
+  * Dificuldade para controlar estoque e promoções.
+* **Objetivos:**
+  * Monitorar resultados financeiros.
+  * Melhorar o controle operacional do spa.
+
+---
+
+#### 2.2.1 Histórias de Usuário
+
+| ID | História de Usuário |
+|---|---|
+| **US-01** | Como usuário, quero gerenciar minha conta, podendo criar, editar e excluir meus dados, para manter minhas informações atualizadas e controlar meu acesso ao sistema. |
+| **US-02** | Como usuário, quero fazer login com e-mail e senha, para acessar o sistema com segurança. |
+| **US-03** | Como usuário, quero recuperar minha senha via e-mail, para recuperar o acesso à minha conta caso a esqueça. |
+| **US-04** | Como cliente, quero visualizar os serviços disponíveis e promoções ativas, para escolher o que melhor atende às minhas necessidades. |
+| **US-05** | Como cliente, quero visualizar os profissionais e suas especialidades, para escolher quem realizará meu atendimento. |
+| **US-06** | Como cliente, quero consultar horários disponíveis, para planejar meu agendamento. |
+| **US-07** | Como cliente, quero realizar um agendamento escolhendo serviço, profissional e horário, para garantir meu atendimento. |
+| **US-08** | Como cliente, quero cancelar um agendamento com antecedência, para liberar o horário quando necessário. |
+| **US-09** | Como cliente, quero consultar meu histórico de atendimentos, para acompanhar os serviços realizados. |
+| **US-10** | Como funcionário, quero consultar minha agenda de atendimentos, para me organizar diariamente. |
+| **US-11** | Como funcionário, quero registrar a evolução dos clientes após cada atendimento, para manter um histórico atualizado. |
+| **US-12** | Como funcionário, quero visualizar informações básicas dos clientes, para personalizar o atendimento. |
+| **US-13** | Como funcionário, quero lançar minhas comissões, para que minha remuneração seja calculada corretamente. |
+| **US-14** | Como recepcionista, quero cadastrar novos clientes, para que possam utilizar os serviços do spa. |
+| **US-15** | Como recepcionista, quero gerenciar os agendamentos da equipe, para manter a agenda organizada. |
+| **US-16** | Como recepcionista, quero localizar rapidamente o agendamento de um cliente, para agilizar o atendimento presencial. |
+| **US-17** | Como recepcionista, quero realizar o check-in do cliente, para confirmar sua chegada ao estabelecimento. |
+| **US-18** | Como recepcionista, quero registrar o pagamento do atendimento, para concluir o processo de venda. |
+| **US-19** | Como gerente, quero acompanhar relatórios financeiros, para monitorar o desempenho do spa. |
+| **US-20** | Como gerente, quero controlar o estoque de produtos utilizados nos atendimentos, para evitar desperdícios e faltas. |
+| **US-21** | Como gerente, quero cadastrar e atualizar serviços oferecidos pelo spa, para manter o catálogo atualizado. |
+| **US-22** | Como gerente, quero criar e gerenciar promoções, para aumentar a atratividade dos serviços. |
+
+---
+
+#### 2.2.2 Casos de Uso
+
+| ID | Caso de Uso | Ator |
+|---|---|---|
+| **UC-01** | Gerenciar Conta | Usuário |
+| **UC-02** | Fazer Login | Usuário |
+| **UC-03** | Recuperar Senha | Usuário |
+| **UC-04** | Visualizar Serviços e Promoções | Cliente |
+| **UC-05** | Visualizar Profissionais | Cliente |
+| **UC-06** | Consultar Horários Disponíveis | Cliente |
+| **UC-07** | Realizar Agendamento | Cliente |
+| **UC-08** | Cancelar Agendamento | Cliente |
+| **UC-09** | Consultar Histórico de Atendimentos | Cliente |
+| **UC-10** | Consultar Agenda de Atendimentos | Funcionário |
+| **UC-11** | Registrar Evolução do Cliente | Funcionário |
+| **UC-12** | Visualizar Dados do Cliente | Funcionário |
+| **UC-13** | Lançar Comissões | Funcionário |
+| **UC-14** | Cadastrar Cliente | Recepcionista |
+| **UC-15** | Gerenciar Agendamentos da Equipe | Recepcionista |
+| **UC-16** | Localizar Agendamento do Cliente | Recepcionista |
+| **UC-17** | Realizar Check-in | Recepcionista |
+| **UC-18** | Registrar Pagamento | Recepcionista |
+| **UC-19** | Acompanhar Relatórios Financeiros | Gerente |
+| **UC-20** | Controlar Estoque de Produtos | Gerente |
+| **UC-21** | Gerenciar Serviços | Gerente |
+| **UC-22** | Gerenciar Promoções | Gerente |
+
+#### 🗺️ Diagrama de Casos de Uso do Sistema
+A seguir, é apresentado o mapeamento visual das interações dos atores com as fronteiras do sistema, detalhado no arquivo [uc-diagram.puml](diagramas/uc-diagram.puml).
+
+![Diagrama de Casos de Uso](images/use-case.png)
+
+---
+
+### 2.3 Diagrama de Sequência do Sistema (DSS)
+O Diagrama de Sequência do Sistema (DSS) mapeia os eventos de entrada e saída gerados pelos atores em direção ao sistema. O fluxo geral consolida todas as interações principais descritas nos casos de uso. O arquivo de especificação original é o [geral-sequence-diagram.puml](diagramas/geral-sequence-diagram.puml).
+
+![DSS Geral do Sistema](images/geral-sequence-diagram.png)
+
+---
+
+## 3. Modelos de Projeto
+
+### 3.1 Arquitetura do Sistema
+O sistema adota uma arquitetura limpa em camadas (Layered Architecture) para o Back-end, desenvolvida com o ecossistema Spring Boot, e arquitetura de componentes e rotas baseadas no Next.js (React) para o Frontend. A separação lógica é demonstrada no arquivo [architecture-diagram.puml](diagramas/architecture-diagram.puml):
+
+* **Controller Layer:** Expõe endpoints REST, lidando com requisições HTTP, autorização básica e mapeando parâmetros de entrada para serviços.
+* **DTO (Data Transfer Object):** Evita o acoplamento direto das entidades de banco de dados (`model`) com a API exposta ao cliente.
+* **Service Layer:** Contém as regras de negócio e orquestração de transações do spa (como cálculo automático de comissões e verificação de conflitos de horários).
+* **Repository Layer:** Camada de acesso a dados estendendo interfaces Spring Data JPA.
+* **Model Layer:** Contém as entidades relacionais anotadas com JPA para persistência.
+* **Security & Exception Config:** Filtros Spring Security (JWT) e tratamento centralizado de erros por exceções customizadas.
+
+![Diagrama de Arquitetura](images/architecture.png)
+
+---
+
+### 3.2 Diagrama de Componentes e Implantação
+O Diagrama de Componentes e Implantação especifica a organização dos módulos do sistema e a infraestrutura física de nuvem proposta. Os diagramas originais são o [component-diagram.puml](diagramas/component-diagram.puml) e o [implantation-component.puml](diagramas/implantation-component.puml).
+
+| Diagrama de Componentes | Diagrama de Implantação |
+|:---:|:---:|
+| ![Diagrama de Componentes](images/component-diagram.png) | ![Diagrama de Implantação](images/implantation-component.png) |
+
+* **Frontend (Next.js):** Hospedado na **Vercel** para entrega rápida e responsiva das interfaces web.
+* **Backend (Spring Boot REST API):** Encapsulado em um container Docker e executado na plataforma **Render**.
+* **Banco de Dados (PostgreSQL):** Instância de banco de dados gerenciada e persistida integrada à nuvem.
+* **Serviços Externos:** Integração SMTP do Gmail para notificações automáticas de confirmações e cancelamentos de agendamentos.
+
+---
+
+### 3.3 Diagrama de Classes
+O Diagrama de Classes detalha os conceitos do domínio do spa, seus atributos, métodos e as associações estruturais (herança, agregação e multiplicidade), mapeado em [class-diagram.puml](diagramas/class-diagram.puml).
+
+![Diagrama de Classes](images/class-diagram.png)
+
+#### 📝 Principais Relações de Domínio:
+* **Herança de Usuário:** `Cliente`, `Funcionario`, `Recepcionista` e `Gerente` herdam a estrutura básica de autenticação da classe `Usuario`.
+* **Associações de Agendamento:** O `Agendamento` unifica as classes de domínio, associando um `Cliente` (quem realiza) unindo-o a um `Funcionario` (quem executa) e um `Servico` (o procedimento realizado).
+* **Fluxo de Pagamento e Comissão:** Um `Agendamento` gera um `Pagamento` único. A conclusão do agendamento por parte do `Funcionario` gera uma `Comissao` associada proporcional ao percentual do profissional.
+* **Gestão de Promoções:** A classe `Promocao` possui relacionamento de muitos-para-muitos (`*` para `*`) com `Servico`, representando descontos aplicáveis a múltiplos tratamentos do catálogo.
+
+---
+
+### 3.4 Diagramas de Sequência por Caso de Uso
+Os Diagramas de Sequência mostram o comportamento dinâmico e a troca de mensagens entre os objetos do sistema em cenários específicos:
+
+#### 1. UC-07: Realizar Agendamento ([puml](diagramas/sequence-diagrama-07.puml))
+Demonstra as chamadas internas desde a consulta de horários e a validação de disponibilidade de profissionais pelo banco de dados até a inserção e confirmação da reserva.
+![Sequência - Realizar Agendamento](images/sequence-diagrama-07.png)
+
+#### 2. UC-10: Consultar Agenda de Atendimentos ([puml](diagramas/sequence-diagram-10.puml))
+Descreve a busca e recuperação de registros de atendimento do profissional para uma data específica no banco de dados.
+![Sequência - Consultar Agenda](images/sequence-diagram-10.png)
+
+#### 3. UC-17: Realizar Check-in ([puml](diagramas/sequence-diagram-17.puml))
+Exibe o fluxo executado pela recepcionista ao confirmar a chegada presencial de um cliente, atualizando o status do agendamento e registrando o timestamp do check-in.
+![Sequência - Realizar Check-in](images/sequence-diagram-17.png)
+
+---
+
+### 3.5 Diagramas de Comunicação
+Os Diagramas de Comunicação (ou Colaboração) complementam a visão de dinâmica do projeto enfatizando a organização estrutural dos objetos que trocam mensagens:
+
+#### 1. UC-07: Realizar Agendamento ([puml](diagramas/comunication-diagram-07.puml))
+![Comunicação - Realizar Agendamento](images/comunication-diagram-07.png)
+
+#### 2. UC-10: Consultar Agenda de Atendimentos ([puml](diagramas/comuncation-diagram-10.puml))
+![Comunicação - Consultar Agenda](images/comuncation-diagram-10.png)
+
+#### 3. UC-17: Realizar Check-in ([puml](diagramas/comuncation-diagram-17.puml))
+![Comunicação - Realizar Check-in](images/comuncation-diagram-17.png)
+
+---
+
+### 3.6 Diagramas de Estados
+O Diagrama de Estados descreve o ciclo de vida de um `Agendamento` no Duda Spa, com base nas ações do cliente e da recepcionista. Mapeado no arquivo [state-diagram.puml](diagramas/state-diagram.puml).
+
+![Diagrama de Estados](images/state-diagram.png)
+
+* **PENDENTE:** O agendamento é solicitado pelo cliente, aguardando validação ou confirmação de dados.
+* **CONFIRMADO:** O horário do profissional é efetivamente reservado.
+* **CANCELADO:** Transição de falha ou desistência, encerrando o fluxo.
+* **CHECKIN_REALIZADO:** Ativado no dia do procedimento assim que a recepcionista valida a chegada do cliente.
+* **CONCLUIDO:** O serviço foi executado com sucesso pelo funcionário.
+* **PAGO:** Transição final bem-sucedida após a recepcionista confirmar o registro do pagamento físico/digital.
+
+---
+
+## 4. Modelos de Dados
+O Modelo Lógico de Dados (Modelo Entidade-Relacionamento) mapeia a estrutura relacional idealizada para o banco PostgreSQL do spa. Detalhado no arquivo [er-diagram.puml](diagramas/er-diagram.puml).
+
+![Modelo de Dados ER](images/er-diagram.png)
+
+### 🗄️ Detalhes do Esquema Relacional:
+* **Especialização de Usuários:** Adota-se o modelo de tabelas separadas com chaves estrangeiras compartilhadas como primárias (PK, FK) para `cliente`, `funcionario`, `recepcionista` e `gerente`, apontando para a tabela pai `usuario`.
+* **Tabela `agendamento`:** Centraliza a relação de chaves estrangeiras (`cliente_id`, `funcionario_id`, `servico_id`).
+* **Tabela `comissao`:** Vincula a comissão calculada tanto ao `funcionario` beneficiado quanto ao `agendamento` de origem.
+* **Relação Muitos-para-Muitos:** Resolvida de forma ideal com a tabela associativa intermediária `promocao_servico` contendo chaves compostas FK (`promocao_id`, `servico_id`).
 
 ---
 
 ## 🛠 Tecnologias Utilizadas
 
-As seguintes ferramentas, frameworks e bibliotecas foram utilizados na construção deste projeto. Recomenda-se o uso das versões listadas (ou superiores) para garantir a compatibilidade.
+Abaixo está o stack de tecnologias de referência projetado para o suporte e execução da aplicação Duda Spa:
 
-### 💻 Front-end
+### 💻 Front-end (Web)
+* **Framework:** Next.js 14 (React)
+* **Linguagem:** TypeScript
+* **Estilização:** CSS Vanilla & Tailwind CSS
+* **Biblioteca de UI:** shadcn/ui & Radix UI
 
-* **Framework/Biblioteca:** Next v13
-* **Linguagem/Superset:** TypeScript
-* **Estilização:** Tailwind CSS, Shadcn
-* **Biblioteca UI:** shadcn/ui
-
-### 🖥️ Back-end
-
-* **Linguagem/Runtime:** Java 17 (JDK)
-* **Framework:** Spring Boot
-* **Banco de Dados:** PostgreSQL
-* **ORM / Query Builder:** Hibernate/JPA
-* **Autenticação:** JWT
+### 🖥️ Back-end (API REST)
+* **Linguagem/Runtime:** Java 17
+* **Framework:** Spring Boot 3.x
+* **Acesso ao Banco:** Spring Data JPA / Hibernate
+* **Segurança:** Spring Security com Tokens stateless JWT
 
 ### ⚙️ Infraestrutura & DevOps
-
-* **Containerização:**  Docker
-* **Orquestração Local:** Docker Compose
-* **Deploy em Nuvem:** Vercel (client) e Render (server)
-* **Banco em Desenvolvimento:**  PostgreSQL 16 em container Docker
-
----
-
-## 🏗 Arquitetura
-
-Descreva aqui a **arquitetura completa do sistema**, explicando como as camadas, módulos e componentes foram organizados. Informe também **por que** essa arquitetura foi escolhida e **quais problemas ela ajuda a resolver**.
-
-Você pode incluir:
-
-- **Visão geral da arquitetura** (ex.: camadas, módulos, microsserviços, monólito modular, hexagonal, MVC etc.)
-- **Principais componentes** e o papel de cada um
-- **Padrões de design adotados** (ex.: Repository, Service Layer, DTOs, Factory, Observer)
-- **Fluxo de dados** entre as partes do sistema
-- **Tecnologias utilizadas em cada camada**
-- **Decisões arquiteturais importantes**
-- **Trade-offs** ou limitações relevantes
-
-### Exemplos de diagramas
-
-Para melhor visualização e entendimento da estrutura do sistema, os diagramas principais estão organizados lado a lado.
-
-| Diagrama de Arquitetura | Detalhe da Arquitetura |
-| :---: | :---: |
-| **Visão Geral (Macro)** | **Camada de Serviço (Micro)** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Visão Geral do Sistema" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Componentes ou Serviço X" width="120px" height="120px"> |
-| **Modelo de Dados (Entidades)** | **Fluxo de Autenticação** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Entidade-Relacionamento (DER)" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Sequência de Login" width="120px" height="120px"> |
-| **Infraestrutura (Cloud)** | **API Gateway (Rotas)** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Deploy na AWS/Vercel" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Mapa de Endpoints da API" width="120px" height="120px"> |
+* **Banco de Dados:** PostgreSQL 16
+* **Containerização:** Docker & Docker Compose
+* **Serviços Cloud:** Vercel (Frontend), Render (Backend)
 
 ---
 
 ## 🔧 Instalação e Execução
 
 ### Pré-requisitos
-Certifique-se de que o usuário tenha o ambiente configurado.
-
-* **Java JDK:** Versão **17** ou superior (Necessário para o **Back-end Spring Boot**)
-* **Node.js:** Versão LTS (v18.x ou superior) (Necessário para o **Front-end React**)
-* **Gerenciador de Pacotes:** npm ou yarn
-* **Docker** (Opcional, mas **altamente recomendado** para rodar o Banco de Dados)
+Antes de executar a aplicação localmente, certifique-se de que possui as ferramentas abaixo instaladas no seu sistema:
+* **Java JDK 17** ou superior.
+* **Node.js LTS** (v18.x ou superior) com NPM/Yarn.
+* **Docker Desktop** (opcional, recomendado para banco de dados).
 
 ---
 
 ### 🔑 Variáveis de Ambiente
 
-Crie arquivos `.env` específicos e/ou configure as variáveis de ambiente no seu sistema para cada parte da aplicação.
-
-#### 1 Back-end (Spring Boot)
-
-Configure estas variáveis como **variáveis de ambiente do sistema** ou em um arquivo de configuração do Spring (ex: `application.properties`/`application.yml`).
-
-| Variável | Descrição | Exemplo |
-| :--- | :--- | :--- |
-| `SERVER_PORT` | Porta onde o Back-end será executado. | `8080` |
-| `SPRING_DATASOURCE_URL` | URL de conexão JDBC (PostgreSQL). | `jdbc:postgresql://localhost:5432/meubanco` |
-| `SPRING_DATASOURCE_USERNAME` | Usuário do banco de dados. | `postgres` |
-| `SPRING_DATASOURCE_PASSWORD` | Senha do banco de dados. | `senha-segura-123` |
-| `JWT_SECRET` | Chave secreta para assinatura de tokens (Opcional). | `chave_super_segura_base64` |
-
-#### 2 Front-end (React, Vite)
-
-Crie um arquivo **`.env`** na raiz da pasta `/frontend` e use o prefixo `VITE_` (ou `REACT_APP_` se estiver usando CRA) para expor as variáveis ao *bundle* da aplicação.
-
-| Variável | Descrição | Exemplo |
-| :--- | :--- | :--- |
-| `VITE_API_URL` | URL base do endpoint do Backend Spring Boot. | `http://localhost:8080/api` |
-| `VITE_EMAILJS_PUBLIC_KEY` | Chave pública para serviços de e-mail (Exemplo). | `sua_public_key_aqui` |
-| `VITE_GOOGLE_MAPS_KEY` | Chave de API para serviços de mapas (Opcional). | `AIzaSy...` |
-
----
-
-#### 3. Exemplos de Variáveis de Ambiente na Vercel
-
-A Vercel permite configurar variáveis no painel (Project Settings > Environment Variables).
-Aqui estão exemplos comuns utilizadas em aplicações front-end e full-stack:
-
----
-
-##### **Exemplo 1 – Front-end com Next.js usando API externa**
-
-```
-NEXT_PUBLIC_API_URL=https://meu-backend.vercel.app/api
-NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=G-seu_google_analytics_id_aqui
+#### 1. Back-end (`/backend/src/main/resources/application.yml`)
+Configure as variáveis do banco de dados no seu ambiente ou use um arquivo `.env` na raiz do backend:
+```env
+SERVER_PORT=8080
+SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/duda_spa_db
+SPRING_DATASOURCE_USERNAME=postgres
+SPRING_DATASOURCE_PASSWORD=suasenha_aqui
+JWT_SECRET=duda_spa_super_secret_token_signature_key_2026
 ```
 
----
-
-##### **Exemplo 2 – Aplicação Full-stack (Next.js + Prisma + PostgreSQL)**
-
-```
-DATABASE_URL=postgresql://admin:senha-super-segura@ep-meu-banco.aws.neon.tech:5432/verceldb
-NEXTAUTH_SECRET=uma_chave_muito_longa_e_segura
-NEXTAUTH_URL=https://meu-sistema.vercel.app
-```
-
----
-
-##### **Exemplo 3 – Integração com APIs externas**
-
-```
-STRIPE_SECRET_KEY=sk_live_seu_stripe_key_aqui
-OPENAI_API_KEY=sk-sua_openai_key_aqui
-SENDGRID_API_KEY=SG.sua_sendgrid_key_aqui
-```
-
----
-
-##### **Exemplo 4 – Frontend com Vite (EmailJS)**
-
-```
-VITE_EMAILJS_SERVICE_ID=seu_service_id_aqui
-VITE_EMAILJS_TEMPLATE_ID_FOR_ME=seu_template_id_for_me_aqui
-VITE_EMAILJS_TEMPLATE_ID_FOR_SENDER=seu_template_id_for_sender_aqui
-VITE_EMAILJS_PUBLIC_KEY=sua_public_key_aqui
-```
-
-> **Obs:** As variáveis de ambiente em projetos **Vite** precisam começar com `VITE_` para que o Vite as reconheça e as inclua no *bundle* do frontend; variáveis sem esse prefixo não ficam disponíveis no código do cliente.
-
----
-
-Para adicionar essas variáveis:
-
-1.  Acesse a página de Environment Variables do seu projeto no Vercel (ex.: `https://vercel.com/<seu-usuario>/<seu-projeto>/settings/environment-variables`)
-2.  Clique em **"Add"** para adicionar cada variável com o nome e valor correspondente.
-
-Alternativamente, se estiver desenvolvendo localmente, crie um arquivo **`.env.local`** dentro da pasta **`frontend`** do seu projeto com o seguinte conteúdo:
-
-```
-# Variável essencial para conectar ao Back-end Spring Boot rodando localmente (normalmente na porta 8080)
+#### 2. Front-end (`/frontend/.env.local`)
+Crie o arquivo na pasta do frontend para expor a URL da API:
+```env
 VITE_API_URL=http://localhost:8080/api
-
-# Variáveis para integrações externas de serviço de e-mail
-VITE_EMAILJS_SERVICE_ID=seu_service_id_aqui
-VITE_EMAILJS_TEMPLATE_ID_FOR_ME=seu_template_id_for_me_aqui
-VITE_EMAILJS_TEMPLATE_ID_FOR_SENDER=seu_template_id_for_sender_aqui
-VITE_EMAILJS_PUBLIC_KEY=sua_public_key_aqui
-
-# Outras chaves de serviço
-VITE_GOOGLE_MAPS_KEY=AIzaSy...
 ```
 
-> 💡 **Localização:** Garanta que este arquivo esteja em **`/frontend/.env.local`** para que o **Vite** consiga carregá-lo e disponibilizar as variáveis para o Front-end durante o desenvolvimento.
+---
 
 ### 📦 Instalação de Dependências
 
-Clone o repositório e instale as dependências.
-
-1.  **Clone o Repositório:**
-
+1. Clone o repositório do projeto:
 ```bash
-git clone <URL_DO_SEU_REPOSITÓRIO>
-cd <pasta-do-projeto>
+git clone https://github.com/eduardavieira-dev/Trabalho-final-projeto-de-software.git
+cd Trabalho-final-projeto-de-software
 ```
 
-2.  **Instale as Dependências (Monorepo):**
-
-Como o projeto está dividido, você precisa instalar as dependências separadamente para o Front-end (React, usando NPM/Yarn) e garantir que o Back-end (Spring Boot, usando Maven/Gradle Wrapper) tenha suas dependências resolvidas.
-
-#### Front-end (React)
-
-Acesse a pasta do Front-end e instale as dependências do Node.js:
-
+2. Instale as dependências do **Front-end**:
 ```bash
 cd frontend
 npm install
-# ou
-yarn install
-cd .. # Retorna para a raiz
+cd ..
 ```
 
-#### Back-end (Spring Boot)
-
-O Spring Boot utiliza o **Maven Wrapper** (`./mvnw`) ou **Gradle Wrapper** (`./gradlew`) para gerenciar dependências. Execute o comando de instalação/build limpo antes de rodar.
-
-* **Usando Maven (`pom.xml`):**
-    ```bash
-    cd backend
-    ./mvnw clean install
-    cd ..
-    ```
-
-* **Usando Gradle (`build.gradle`):**
-    ```bash
-    cd backend
-    ./gradlew clean build
-    cd ..
-    ```
+3. Compile e baixe as dependências do **Back-end**:
+```bash
+cd backend
+./mvnw clean install
+cd ..
+```
 
 ---
 
 ### 💾 Inicialização do Banco de Dados (PostgreSQL)
 
-O projeto utiliza **PostgreSQL**. A forma mais fácil de inicializar o banco é via Docker (para execução sem `docker-compose`):
-
-1. **Rode o Container do PostgreSQL:**  
-   (Certifique-se que o Docker está em execução)
-
+Caso queira inicializar uma instância local rápida do banco de dados utilizando Docker, execute o comando a seguir:
 ```bash
-docker run --name minha_db -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=senha-segura-123 -e POSTGRES_DB=nome_do_banco -p 5432:5432 -d postgres:16
+docker run --name duda_spa_db -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=suasenha_aqui -e POSTGRES_DB=duda_spa_db -p 5432:5432 -d postgres:16
 ```
+As migrações de banco (tabelas e cargas iniciais) serão criadas e executadas automaticamente pelo Hibernate/JPA assim que a API REST for iniciada em modo de desenvolvimento.
 
-2. **Execute as Migrações:**  
-   O Back-end **Spring Boot** geralmente gerencia o schema do banco de dados automaticamente no startup (via Hibernate `ddl-auto`) ou utilizando ferramentas como **Flyway** ou **Liquibase**.
-
-* **Se o Spring Boot gerencia o schema (padrão):** Nenhuma ação manual é necessária, basta rodar o Back-end (veja a próxima seção).
-* **Se usar Flyway/Liquibase via Maven:**
-    ```bash
-    cd backend
-    ./mvnw flyway:migrate
-    # ou
-    ./mvnw liquibase:update
-    ```
 ---
 
 ### ⚡ Como Executar a Aplicação
-Execute a aplicação em modo de desenvolvimento em **dois terminais separados**.
+
+Execute a aplicação em dois terminais paralelos:
 
 #### Terminal 1: Back-end (Spring Boot)
-
-Inicie a API do Spring Boot. Ela tentará se conectar ao banco de dados rodando no Docker.
-
 ```bash
 cd backend
 ./mvnw spring-boot:run
 ```
-🚀 *O Back-end estará disponível em **http://localhost:8080**.*
+*A API REST estará rodando em: `http://localhost:8080`*
 
----
-
-#### Terminal 2: Front-end (React, Vite)
-
-Inicie o servidor de desenvolvimento do Front-end.
-
+#### Terminal 2: Front-end (Next.js)
 ```bash
 cd frontend
 npm run dev
-# ou
-yarn dev
 ```
-🎨 *O Front-end estará disponível em **http://localhost:5173** (ou a porta configurada no Vite/CRA).*
-
----
-
-#### 🐳 Execução Local Completa com Docker Compose (Incluindo Banco de Dados)
-
-Para uma execução local que inclui o serviço de Back-end (**Spring Boot**), Front-end (**React**) e o banco de dados **PostgreSQL**, usaremos o **`docker-compose`** para orquestração.
-
-Antes de tudo, certifique-se de que o **Docker Desktop** (no Mac/Windows) ou o **serviço Docker** (em Linux) está em execução.
-
-- **No Mac/Windows**: basta abrir o aplicativo **Docker Desktop**.
-- **No Linux**: rode o comando abaixo para iniciar o serviço:
-
-```bash
-sudo systemctl start docker
-```
-
----
-
-#### 📦 Passos para build, inicialização e execução
-
-1. Acesse a pasta raiz do projeto (onde o arquivo `docker-compose.yml` está localizado):
-
-```bash
-cd /caminho/do/projeto/nome-do-projeto
-```
-
-2. Suba todos os serviços (Back-end, Front-end e Banco de Dados) definidos no `docker-compose.yml`:
-
-```bash
-docker-compose up --build -d
-```
-
-> [!NOTE]
-> 💡 O parâmetro `--build` garante que as imagens mais recentes do projeto sejam geradas, e `-d` executa em segundo plano.
-
-3. Verifique se os containers estão rodando:
-
-```bash
-docker ps
-```
-
-4. **Execute as Migrações do Banco de Dados:**
-   O Back-end **Spring Boot** geralmente gerencia o schema do banco de dados (via Flyway/Liquibase ou Hibernate) na **inicialização do serviço**.
-
-* **Verificação:** Se o serviço de Back-end (`backend` ou `api`) for o responsável pelas migrações, verifique os logs para confirmar se o processo foi concluído.
-    ```bash
-    docker logs <nome_do_container_backend>
-    ```
-* *Atenção:* O comando `npm run db:migrate` é exclusivo para Node.js e **não** deve ser usado.
-
-5. Abra no navegador:
-   O Front-end deve estar acessível na porta configurada no `docker-compose` (Exemplo: <http://localhost:3000> ou <http://localhost:5173>)
-
-6. Para parar e remover todos os containers, redes e volumes (exceto volumes nomeados):
-
-```bash
-docker-compose down
-```
-
-✅ **Em resumo:** Usar **`docker-compose`** simplifica a execução do ambiente completo, isolando as dependências de **Java (Spring Boot)** e **Node.js (React)** e garantindo que o PostgreSQL esteja disponível.
+*O painel web estará disponível em: `http://localhost:3000` (ou `http://localhost:5173` conforme porta padrão do Vite)*
 
 ---
 
 ## 🚀 Deploy
-Instruções claras para deploy em produção.
 
-1.  **Build do Projeto:**
-    Execute o build separadamente para os dois artefatos (JAR para o Back-end e arquivos estáticos para o Front-end).
+O build final do sistema é gerado da seguinte forma:
 
 ```bash
-# 1. Build do Front-end (React/Vite) - Gera a pasta /dist com arquivos estáticos
+# Build do Frontend (gera a pasta /dist ou pasta de exportação estática do Next.js)
 cd frontend
 npm run build
 
-# 2. Build do Back-end (Spring Boot/Maven) - Gera o arquivo .jar executável em /target
+# Build do Backend (gera o arquivo JAR executável na pasta target/)
 cd ../backend
 ./mvnw clean package
 ```
 
-2.  **Configuração do Ambiente de Produção:** Defina as variáveis de ambiente no seu provedor (e.g., Vercel, Railway, Heroku, DigitalOcean).
-
-> 🔑 **Variáveis Cruciais:** Certifique-se de configurar as variáveis de **conexão com o banco de dados** (`SPRING_DATASOURCE_URL`, etc.) para o Back-end e a **URL da API de produção** (`VITE_API_URL`) para o Front-end.
-
-3.  **Execução em Produção:**
-    A forma de execução depende do seu provedor, mas geralmente envolve o seguinte:
-
+Para rodar os serviços construídos de forma integrada em ambiente de produção:
 ```bash
-# ☕ Execução do Back-end Spring Boot (Java JAR)
-# Este comando inicia a API usando o artefato JAR gerado.
-java -jar backend/target/nome-do-do-projeto-0.0.1-SNAPSHOT.jar
-
-# 🟢 Execução do Front-end (React/Vite)
-# O Front-end (arquivos estáticos) não é executado via Node, mas servido por um servidor web.
-# Exemplo de servidor de arquivos estáticos (usando Nginx, Vercel, Netlify, etc.)
-# Para simular a produção localmente ou rodar em uma VPS simples, use o pacote 'serve':
-npm install -g serve
-serve -s frontend/dist
+# Executando o servidor Java
+java -jar backend/target/duda-spa-backend-0.0.1-SNAPSHOT.jar
 ```
 
 ---
 
 ## 📂 Estrutura de Pastas
-
-Descreva o propósito das pastas principais.
+A estrutura lógica proposta para organizar os artefatos de documentação, front-end, back-end e diagramas do projeto é apresentada a seguir:
 
 ```
 .
-├── .editorconfig                # ✍️ Padronização de estilo de código.
-├── .env.local                   # 🔒 Variáveis SENSÍVEIS do ambiente LOCAL (não versionado).
-├── .env.test                    # 🧪 Variáveis de ambiente para TESTES AUTOMATIZADOS.
-├── .env.staging                 # ☁️ Variáveis de ambiente para STAGING/HOMOLOGAÇÃO.
-├── .env.example                 # 🧩 Exemplo de TODAS as variáveis necessárias (sem valores sensíveis).
-├── .gitignore                   # 🧹 Ignora arquivos/pastas não versionadas (.env, node_modules, target, etc.).
-├── .vscode/                     # ⚙️ Configurações de ambiente da IDE (opcional).
-├── .github/                     # 🤖 CI/CD (Actions), templates de Issues e Pull Requests.
-├── README.md                    # 📘 Documentação principal do projeto.
-├── CONTRIBUTING.md              # 🤝 Guia de contribuição.
-├── LICENSE                      # ⚖️ Licença do projeto.
-├── docker-compose.yml           # 🐳 Orquestração dos containers (front/back/db/etc).
-├── docker-compose.override.yml  # 🐳 Configurações extras apenas para desenvolvimento.
+├── README.md                           # Documentação principal do projeto
+├── LICENSE                             # Arquivo de licença do projeto
+├── Trabalho2-DocumentacaoProjeto.pdf   # Relatório oficial em PDF
 │
-├── /frontend                    # 📁 Aplicação React
-│   ├── .env.example             # 🧩 Variáveis de ambiente do Front-end.
-│   ├── Dockerfile               # 🐳 Docker build do Front-end.
-│   ├── .eslintrc.js             # ✨ Regras do ESLint.
-│   ├── .prettierrc              # 🎨 Configuração do Prettier.
-│   ├── /public                  # 📂 Arquivos estáticos e index.html.
-│   ├── /src                     # 📂 Código-fonte React
-│   │   ├── /components          # 🧱 Componentes reutilizáveis (UI).
-│   │   ├── /pages               # 📄 Páginas/rotas da aplicação.
-│   │   ├── /services            # 🔌 Serviços e chamadas HTTP.
-│   │   ├── /hooks               # 🎣 Hooks personalizados.
-│   │   ├── /styles              # 🎨 Estilos globais, temas, Design System.
-│   │   ├── /assets              # 🖼️ Recursos estáticos importados
-│   │   │   ├── /images          # 🖼️ Imagens.
-│   │   │   ├── /icons           # 💡 Ícones.
-│   │   │   └── /fonts           # ✒️ Fontes personalizadas.
-│   │   └── /utils               # 🛠️ Funções utilitárias.
-│   ├── package.json             # 📦 Dependências e scripts.
-│   └── yarn.lock / package-lock.json # 🔒 Lockfile das dependências.
+├── /diagramas                          # Código fonte dos diagramas UML (PlantUML)
+│   ├── uc-diagram.puml                 # Diagrama de Casos de Uso
+│   ├── class-diagram.puml              # Diagrama de Classes
+│   ├── er-diagram.puml                 # Diagrama de Entidade-Relacionamento
+│   ├── architecture-diagram.puml       # Diagrama de Arquitetura estrutural
+│   ├── component-diagram.puml          # Diagrama de Módulos de Componentes
+│   ├── implantation-component.puml     # Diagrama de Componentes e Implantação
+│   ├── geral-sequence-diagram.puml     # DSS Geral do Sistema
+│   ├── sequence-diagrama-07.puml       # DSS - UC-07
+│   ├── sequence-diagram-10.puml        # DSS - UC-10
+│   ├── sequence-diagram-17.puml        # DSS - UC-17
+│   ├── comunication-diagram-07.puml    # Diagrama de Comunicação - UC-07
+│   ├── comuncation-diagram-10.puml     # Diagrama de Comunicação - UC-10
+│   ├── comuncation-diagram-17.puml     # Diagrama de Comunicação - UC-17
+│   └── state-diagram.puml              # Diagrama de Estados do Agendamento
 │
-├── /backend                     # 📁 Aplicação Spring Boot
-│   ├── .env.example             # 🧩 Variáveis de ambiente do Back-end.
-│   ├── Dockerfile               # 🐳 Docker build do Back-end.
-│   │
-│   ├── /src/main/java           # 📂 Código-fonte Java
-│   │   └── /com/exemplo/app
-│   │       ├── /controller      # 🎮 Endpoints REST.
-│   │       ├── /service         # ⚙️ Regras e lógica de negócio.
-│   │       ├── /repository      # 🗄️ Repositórios (JPA/Hibernate).
-│   │       ├── /model           # 🧬 Entidades persistentes (JPA).
-│   │       ├── /domain          # 🌐 Objetos de Domínio puro (sem anotações).
-│   │       ├── /dto             # ✉️ Data Transfer Objects.
-│   │       ├── /config          # 🔧 Configurações gerais (DB, Swagger, CORS, etc.).
-│   │       ├── /exception       # 💥 Exceptions e handlers globais.
-│   │       └── /security        # 🛡️ Autenticação e Autorização (Spring Security).
-│   │
-│   ├── /src/main/resources      # 📂 Recursos do Spring Boot
-│   │   ├── application.yml         # ⚙️ Configuração principal da aplicação
-│   │   ├── application-dev.yml     # 🧪 Configurações específicas do ambiente de DESENVOLVIMENTO
-│   │   ├── application-prod.yml    # 🚀 Configurações específicas para PRODUÇÃO
-│   │   ├── application-test.yml    # 🧪 Configurações usadas nos testes automatizados
-│   │   ├── /static                # 🌐 Arquivos estáticos (HTML/CSS/JS).
-│   │   ├── /templates             # 🖼️ Templates Thymeleaf/Freemarker.
-│   │   ├── /messages              # 🌎 Arquivos de internacionalização (i18n).
-│   │   └── /db                    # 💾 Scripts de banco usados pela aplicação
-│   │       └── /migration         # 📜 Migrações do banco (Flyway/Liquibase).
-│   │
-│   ├── /src/test/java            # 🧪 Testes unitários e de integração.
-│   └── pom.xml / build.gradle    # 🛠️ Build e dependências.
+├── /images                             # Diagramas exportados como imagens PNG e logo
+│   ├── duda_spa_logo.png               # Logo oficial da marca Duda Spa
+│   ├── use-case.png
+│   ├── class-diagram.png
+│   ├── er-diagram.png
+│   ├── architecture.png
+│   ├── component-diagram.png
+│   ├── implantation-component.png
+│   ├── geral-sequence-diagram.png
+│   ├── sequence-diagrama-07.png
+│   ├── sequence-diagram-10.png
+│   ├── sequence-diagram-17.png
+│   ├── comunication-diagram-07.png
+│   ├── comuncation-diagram-10.png
+│   ├── comuncation-diagram-17.png
+│   └── state-diagram.png
 │
-├── /scripts                      # 📜 Scripts de automação
-│   ├── dev.sh                    # 🚀 Ambiente de desenvolvimento completo.
-│   ├── build_all.sh              # 🛠️ Build geral (front + back).
-│   └── deploy.sh                 # ☁️ Deploy em produção/homologação.
+├── /backend                            # Estrutura modular da API REST (Spring Boot)
+│   ├── src/main/java/com/dudaspa/app   # Controladores, Entidades, Serviços e Repositórios
+│   └── pom.xml                         # Dependências do Maven
 │
-├── /docs                         # 📚 Documentação, arquitetura, modelos C4, Swagger/OpenAPI.
-└── /tests                        # 🧪 Testes End-to-End (Cypress/Playwright).
-```
-
----
-
-## 🎥 Demonstração
-
-Use GIFs e prints para mostrar o projeto em ação.  
-
-> [!WARNING]
-> Dê preferência a hospedar suas imagens em um **CDN** (Content Delivery Network) ou no **GitHub Pages** para garantir que elas carreguem rapidamente e não quebrem. Saiba mais sobre o GitHub Pages clicando [aqui](https://github.com/joaopauloaramuni/joaopauloaramuni.github.io).
-
-### 📱 Aplicativo Mobile
-
-- GIF de demonstração (exemplo de fluxo de usuário):  
-
-| Demonstração 1 | Demonstração 2 | Demonstração 3 | Demonstração 4 |
-|----------------|----------------|----------------|----------------|
-| <img src="https://joaopauloaramuni.github.io/image/fundo_mobile_engsoft.jpeg" alt="Demonstração 1" height="400"> | <img src="https://joaopauloaramuni.github.io/image/fundo_mobile_engsoft.jpeg" alt="Demonstração 2" height="400"> | <img src="https://joaopauloaramuni.github.io/image/fundo_mobile_engsoft.jpeg" alt="Demonstração 3" height="400"> | <img src="https://joaopauloaramuni.github.io/image/fundo_mobile_engsoft.jpeg" alt="Demonstração 4" height="400"> |
-| _Sua gif aqui_ | _Sua gif aqui_ | _Sua gif aqui_ | _Sua gif aqui_ |
-
-Para melhor visualização, as telas principais estão organizadas lado a lado.
-
-| Tela | Captura de Tela |
-| :---: | :---: |
-| **Tela Inicial (Home)** | **Tela de Perfil / Settings** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela 1 do Mobile" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela 2 do Mobile" width="120px" height="120px"> |
-| **Tela de Cadastro** | **Tela de Lista / Detalhes** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela 3 do Mobile" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela 4 do Mobile" width="120px" height="120px"> |
-
-### 🌐 Aplicação Web
-
-Para melhor visualização, as telas principais estão organizadas lado a lado.
-
-| Tela | Captura de Tela |
-| :---: | :---: |
-| **Página Inicial (Home)** | **Página de Login** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela Inicial da Aplicação Web" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Login" width="120px" height="120px"> |
-| **Cadastro de Clientes** | **Cadastro de Produtos** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Cadastro de Clientes" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Cadastro de Produtos" width="120px" height="120px"> |
-| **Dashboard (Visão Geral)** | **Página Admin / Configurações** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Dashboard" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela Administrativa" width="120px" height="120px"> |
-
-### 💻 Exemplo de Saída no Terminal (para Back-end, API, CLI)
-
-Caso o projeto seja focado em serviços de Back-end (API, microserviço, CLI), utilize esta seção para demonstrar a interação com o sistema e a resposta esperada.
-
-#### 1. Demonstração da API (Exemplo com cURL)
-
-Mostra uma chamada simples para um endpoint da API (ex: GET de listagem).
-
-```bash
-# Chama o endpoint de listagem de usuários com o token de autenticação
-curl -X GET 'http://localhost:3000/api/v1/users' \
-     -H 'Authorization: Bearer <seu-jwt-token>'
-```
-
-**Saída Esperada:**
-```json
-{
-  "total": 2,
-  "users": [
-    {
-      "id": "1a2b3c",
-      "name": "Prof. Aramuni",
-      "email": "contato@exemplo.com",
-      "status": "active"
-    },
-    {
-      "id": "4d5e6f",
-      "name": "Colaborador Teste",
-      "email": "teste@exemplo.com",
-      "status": "inactive"
-    }
-  ]
-}
-```
-
----
-
-#### 2. Demonstração de Execução de CLI/Script
-
-Mostra como executar uma ferramenta de linha de comando ou um script de manutenção do projeto (ex: rodar migrações ou um job agendado).
-
-```bash
-# Executa a ferramenta de validação de Schema
-npm run cli validate:schema --target=production
-```
-
-**Saída Esperada:**
-```text
-[INFO] Iniciando validação do banco de dados...
-[SUCCESS] 15/15 tabelas verificadas.
-[WARNING] Coluna 'descricao' na tabela 'produtos' é nullable.
-[SUCCESS] Validação concluída. Nenhum erro crítico encontrado.
-Tempo de execução: 1.25s
+└── /frontend                           # Estrutura do Frontend SPA/SSR (Next.js)
+    ├── src/components                  # Componentes reutilizáveis de tela
+    ├── src/pages                       # Telas principais de Clientes, Funcionários, Recepcionista e Gerente
+    └── package.json                    # Scripts e bibliotecas Node.js
 ```
 
 ---
 
 ## 🧪 Testes
 
-### Testes Unitários e de Integração
-Para rodar os testes da unidade e integração:
-
+### Testes de Integração e Unitários (Back-end)
+O backend Spring Boot foi projetado para rodar testes utilizando JUnit 5 e Mockito para simular as principais lógicas de comissão e validação de conflitos de agenda:
+```bash
+cd backend
+./mvnw test
 ```
-npm run test
-```
-*Ferramenta utilizada: Jest, Vitest, Mocha, etc.*
 
-### Testes End-to-End (E2E)
-Para rodar os testes de ponta a ponta (E2E):
-
-```
+### Testes End-to-End (Frontend)
+Para testes de interface E2E cobrindo o fluxo de agendamento do cliente e validações de check-in, propõe-se o uso do Cypress:
+```bash
+cd frontend
 npm run test:e2e
 ```
-*Ferramenta utilizada: Cypress, Playwright, Selenium, etc.*
 
 ---
 
-## 🔗 Documentações utilizadas
-
-Liste aqui links para documentação técnica, referências de bibliotecas complexas ou guias de estilo que foram cruciais para o projeto.
-
-* 📖 **Framework/Biblioteca (Front-end):** [Documentação Oficial do **React**](https://react.dev/reference/react)
-* 📖 **Build Tool (Front-end):** [Guia de Configuração do **Vite**](https://vitejs.dev/config/)
-* 📖 **Framework (Back-end):** [Documentação Oficial do **Spring Boot**](https://docs.spring.io/spring-boot/docs/current/reference/html/)
-* 📖 **Containerização:** [Documentação de Referência do **Docker**](https://docs.docker.com/)
-* 📖 **Guia de Estilo:** [**Conventional Commits** (Padrão de Mensagens)](https://www.conventionalcommits.org/en/v1.0.0/)
-* 📖 **Documentação Interna:** [Design System do Projeto](./docs/design-system.md)
+## 🔗 Documentações Utilizadas
+* [Documentação Oficial do Spring Boot](https://docs.spring.io/spring-boot/docs/current/reference/html/)
+* [Documentação do Next.js (React)](https://nextjs.org/docs)
+* [Manual do Usuário PlantUML](https://plantuml.com/pt-br/)
+* [Especificação JPA & Hibernate](https://hibernate.org/orm/documentation/)
+* [Padrão de Commits Semânticos (Conventional Commits)](https://www.conventionalcommits.org/pt-br/v1.0.0/)
 
 ---
 
 ## 👥 Autores
-Liste os principais contribuidores. Você pode usar links para seus perfis.
 
 | 👤 Nome | 🖼️ Foto | :octocat: GitHub | 💼 LinkedIn | 📤 Gmail |
 |---------|----------|-----------------|-------------|-----------|
 | Eduarda Vieira Gonçalves | <div align="center"><img src="https://avatars.githubusercontent.com/u/159597766?v=4" width="70px" height="70px" style="object-fit: cover;"></div> | <div align="center"><a href="https://github.com/eduardavieira-dev"><img src="https://joaopauloaramuni.github.io/image/github6.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/eduarda-vieira-gon%C3%A7alves-01a584297/"><img src="https://joaopauloaramuni.github.io/image/linkedin2.png" width="50px" height="50px"></a></div> | <div align="center"><a href="mailto:eduarda.vieira.goncalves7@gmail.com"><img src="https://joaopauloaramuni.github.io/image/gmail3.png" width="50px" height="50px" ></a></div> |
 
-
-> [!TIP]
-> 💡 **Dica:** Escolha uma foto profissional, preferencialmente de rosto, evitando imagens com baixa qualidade, filtros excessivos ou elementos distrativos.
-
 ---
 
 ## 🤝 Contribuição
-Guia para contribuições ao projeto.
-
-1.  Faça um `fork` do projeto.
-2.  Crie uma branch para sua feature (`git checkout -b feature/minha-feature`).
-3. Commit suas mudanças (`git commit -m 'feat: Adiciona nova funcionalidade X'`). **(Utilize [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/))**
-4.  Faça o `push` para a branch (`git push origin feature/minha-feature`).
-5.  Abra um **Pull Request (PR)**.
-
-> [!IMPORTANT]
-> 📝 **Regras:** Por favor, verifique o arquivo [`CONTRIBUTING.md`](./CONTRIBUTING.md) para detalhes sobre nosso guia de estilo de código e o processo de submissão de PRs.
+1. Faça um `fork` do projeto.
+2. Crie uma branch para sua funcionalidade: `git checkout -b feature/minha-feature`.
+3. Commit suas alterações seguindo a padronização de Commits Semânticos: `git commit -m 'feat: adiciona fluxo de comissão customizada'`.
+4. Envie a branch para o repositório remoto: `git push origin feature/minha-feature`.
+5. Abra um **Pull Request (PR)** para revisão.
 
 ---
 
 ## 🙏 Agradecimentos
-
-Esta seção reconhece as instituições, professores e iniciativas que contribuíram significativamente para a realização deste projeto acadêmico.
-
-- [**Engenharia de Software PUC Minas**](https://www.instagram.com/engsoftwarepucminas/) - Pelo suporte institucional, infraestrutura acadêmica e incentivo à aplicação prática de conhecimentos técnicos em engenharia de software.
-
-- [**Prof. Dr. João Paulo Aramuni**](https://github.com/joaopauloaramuni) - Pela orientação acadêmica e oportunidade oferecida para o desenvolvimento deste projeto, possibilitando a aplicação de conceitos e metodologias de engenharia de software em um contexto real.
-
+* **Engenharia de Software PUC Minas** – Pelo suporte institucional, infraestrutura de ensino e incentivo constante à excelência acadêmica na modelagem e desenvolvimento de sistemas reais de engenharia.
+* **Prof. Dr. João Paulo Aramuni** – Pela docência de alto nível, dedicação pedagógica na disciplina de Projeto de Software e pelas diretrizes que estruturaram o desenvolvimento deste trabalho.
 
 ---
 
 ## 📄 Licença
-
-Este projeto é distribuído sob a **[Licença MIT](https://github.com/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software/blob/main/LICENSE)**.
-
----
+Este projeto é distribuído sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
