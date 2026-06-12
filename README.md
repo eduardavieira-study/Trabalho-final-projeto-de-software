@@ -528,7 +528,7 @@ npm run test:e2e
 
 ---
 
-## 👥 Autores
+## 👥 Autora
 
 | 👤 Nome | 🖼️ Foto | :octocat: GitHub | 💼 LinkedIn | 📤 Gmail |
 |---------|----------|-----------------|-------------|-----------|
